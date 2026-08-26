@@ -1,0 +1,20 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "luminous_nether:goldenstem"
+    },
+    {
+      "item": "luminous_nether:goldmushroom"
+    },
+    {
+      "item": "luminous_nether:shredded_stem"
+    }
+  ],
+  "result": {
+    "id": "shieldexp:wooden_shield",
+    "count": 1
+  },
+  "ingredient_count": 2,
+  "type": "sawmill:woodcutting"
+}

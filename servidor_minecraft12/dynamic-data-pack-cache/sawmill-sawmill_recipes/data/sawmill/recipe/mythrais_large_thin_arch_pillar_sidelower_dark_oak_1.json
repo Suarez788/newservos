@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:oak_planks"
+  },
+  "result": {
+    "id": "mythrais:large_thin_arch_pillar_sidelower_dark_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:mangrove_planks"
+  },
+  "result": {
+    "id": "mythrais:spiral_stairs_corner_ext_lower_dark_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

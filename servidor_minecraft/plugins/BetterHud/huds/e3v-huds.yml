@@ -1,0 +1,15 @@
+e3v_upscreen_hud:
+  default: true
+  layouts:
+    1:
+      name: e3v_uphearts_layout
+      x: 50
+      y: 0
+    2:
+      name: e3v_upscreen_layout
+      x: 50
+      y: 0
+    3:
+      name: e3v_downhazards_layout
+      x: 50
+      y: 100

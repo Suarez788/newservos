@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:fir_log"
+    },
+    {
+      "item": "bloomingnature:fir_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_fir_log"
+    },
+    {
+      "item": "bloomingnature:stripped_fir_wood"
+    }
+  ],
+  "result": {
+    "id": "bloomingnature:fir_stairs",
+    "count": 4
+  },
+  "type": "sawmill:woodcutting"
+}

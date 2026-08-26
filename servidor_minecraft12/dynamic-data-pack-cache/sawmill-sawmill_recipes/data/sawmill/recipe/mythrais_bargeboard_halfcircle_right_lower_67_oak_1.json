@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:jungle_planks"
+  },
+  "result": {
+    "id": "mythrais:bargeboard_halfcircle_right_lower_67_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "bloomingnature:fan_palm_planks"
+  },
+  "result": {
+    "id": "bloomingnature:fan_palm_slab",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

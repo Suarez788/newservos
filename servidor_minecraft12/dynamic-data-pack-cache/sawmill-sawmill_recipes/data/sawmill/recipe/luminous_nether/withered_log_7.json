@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "luminous_nether:stripped_withered_log"
+  },
+  "result": {
+    "id": "luminous_nether:stripped_withered_wood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:birch_planks"
+  },
+  "result": {
+    "id": "mythrais:bargeboard_halfcircle_left_45_yellowwood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

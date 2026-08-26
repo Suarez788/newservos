@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "bloomingnature:aspen_planks"
+  },
+  "result": {
+    "id": "bloomingnature:aspen_slab",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

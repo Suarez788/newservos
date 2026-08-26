@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "ghosts:haunted_log"
+  },
+  "result": {
+    "id": "ghosts:stripped_haunted_log",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

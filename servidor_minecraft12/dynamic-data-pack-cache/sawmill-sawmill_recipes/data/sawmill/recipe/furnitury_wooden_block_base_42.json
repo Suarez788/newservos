@@ -1,0 +1,16 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "nethers_exoticism:ramboutan_log"
+    },
+    {
+      "item": "nethers_exoticism:ramboutan_wood"
+    }
+  ],
+  "result": {
+    "id": "furnitury:wooden_block_base",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

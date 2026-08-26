@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:fan_palm_log"
+    },
+    {
+      "item": "bloomingnature:fan_palm_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_fan_palm_log"
+    },
+    {
+      "item": "bloomingnature:stripped_fan_palm_wood"
+    }
+  ],
+  "result": {
+    "id": "farm_and_charm:water_trough",
+    "count": 3
+  },
+  "type": "sawmill:woodcutting"
+}

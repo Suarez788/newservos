@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "enderscape:veiled_wood"
+  },
+  "result": {
+    "id": "enderscape:veiled_log",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

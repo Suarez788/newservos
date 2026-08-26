@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "bloomingnature:fan_palm_wood"
+  },
+  "result": {
+    "id": "bloomingnature:stripped_fan_palm_log",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

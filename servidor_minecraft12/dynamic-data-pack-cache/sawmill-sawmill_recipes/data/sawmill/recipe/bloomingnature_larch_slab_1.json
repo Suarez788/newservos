@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "bloomingnature:larch_planks"
+  },
+  "result": {
+    "id": "bloomingnature:larch_slab",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

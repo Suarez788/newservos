@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "alexscaves:thornwood_planks"
+  },
+  "result": {
+    "id": "supplementaries:alexscaves/way_sign_thornwood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,16 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "ghosts:haunted_log"
+    },
+    {
+      "item": "ghosts:stripped_haunted_log"
+    }
+  ],
+  "result": {
+    "id": "minecraft:chiseled_bookshelf",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

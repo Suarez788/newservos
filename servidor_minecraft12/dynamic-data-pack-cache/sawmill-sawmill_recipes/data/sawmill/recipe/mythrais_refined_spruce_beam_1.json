@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:spruce_planks"
+  },
+  "result": {
+    "id": "mythrais:refined_spruce_beam",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

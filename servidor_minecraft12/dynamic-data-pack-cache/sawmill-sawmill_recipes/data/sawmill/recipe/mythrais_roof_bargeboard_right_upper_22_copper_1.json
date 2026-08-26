@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:cherry_planks"
+  },
+  "result": {
+    "id": "mythrais:roof_bargeboard_right_upper_22_copper",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

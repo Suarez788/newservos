@@ -1,0 +1,17 @@
+# *# Base de datos de jugadores de E3V.
+
+
+27624550-5762-38db-a0a7-5ccd77095ef1:
+  name: VenaticWinner67
+  current_lifes: 5
+  broken_lifes: 0
+  minecoins: 0
+  hazard:
+    level: 1
+    expires_at: -1
+    progress: 0
+  revenge: {}
+  stats:
+    player_kills: 0
+    mobs_kills: 0
+    deaths: 0

@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:cherry_planks"
+  },
+  "result": {
+    "id": "mythrais:refined_cherry_beam",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

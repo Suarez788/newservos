@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:bamboo_planks"
+  },
+  "result": {
+    "id": "mythrais:refined_bamboo_beam",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

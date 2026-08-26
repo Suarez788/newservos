@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "bloomingnature:cypress_planks"
+  },
+  "result": {
+    "id": "bloomingnature:cypress_button",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

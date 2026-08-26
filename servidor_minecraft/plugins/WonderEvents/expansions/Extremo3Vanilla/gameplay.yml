@@ -1,0 +1,482 @@
+#*# ==============================================================
+#*# GAMEPLAY.YML - Extremo 3 Vanilla (E3V)
+#*# Configuracion de reglas de juego: muertes, vidas, venganza y hazard.
+#*# --------------------------------------------------------------
+#*# Formato de duraciones (donde aparezca, ej. revenge.duration,
+#*# hazard.levels.X.expiration.duration): numero + unidad pegada.
+#*#   s = segundos | m = minutos | h = horas | d = dias | t = ticks (1t = 50ms)
+#*#   -1 = infinito / sin expiracion
+#*# Ejemplos validos: 30s, 20m, 12h, 2d, 100t, -1
+#*# ==============================================================
+
+Gameplay:
+  death:
+    #*# ================================================================
+    #*# DEATH -> LIFE_LOSS: que pasa cuando un jugador pierde UNA vida al morir
+    #*# (siempre que todavia le queden vidas de sobra; si se queda sin vidas
+    #*# entra en juego DEATH -> ELIMINATED, mas abajo).
+    #*# ================================================================
+    life_loss:
+      enabled: true
+      # Si esta en FALSE: nadie pierde vidas al morir (el sistema de vidas queda desactivado por completo)
+      # y tampoco se disparan los mensajes/broadcast de "perdiste una vida".
+      # Si esta en TRUE (comportamiento normal), se resta 1 vida por muerte salvo que aplique alguno de
+      # los "bypass" de abajo.
+
+      amount: 1 
+      # Cantidad de vidas que se restan por cada muerte (normalmente deja esto en 1; solo cambialo si quieres
+      # que cada muerte cueste mas de 1 vida de golpe).
+
+      bypass:
+        ## Si el jugador muere cumpliendo CUALQUIERA de estas condiciones, NO pierde la vida (se queda exactamente
+        ## con las vidas que tenia, ej. si tenia 2/5 sigue con 2/5 al respawnear) y tampoco salen los mensajes/broadcast
+        ## de perdida de vida.
+
+        permission: "e3v.bypass.lose_life"
+        # Los jugadores CON este permiso nunca pierden vidas al morir. Dale este permiso a staff/admins que necesiten
+        # morir sin ser penalizados.
+        #* Puedes usar plugins de permisos como LuckPerms para otorgar este permiso
+
+        gamemodes:
+          - CREATIVE
+          - SPECTATOR
+        # Si el jugador muere estando en alguno de estos gamemodes, no pierde vida. Valores validos de Minecraft:
+        # SURVIVAL, CREATIVE, ADVENTURE, SPECTATOR.
+
+        worlds: []
+        # Lista de nombres de mundos (ej. "world_creativo") donde morir NO cuesta vida.
+        # Vacio = aplica en todos los mundos.
+
+        entities: []
+        # Lista de tipos de entidad de Minecraft (ej. "ZOMBIE", "CREEPER") que, si matan al jugador, no le cuestan
+        # una vida.
+        # Vacio = ninguna excepcion por entidad.
+        #* EntityType: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+
+        causes: []
+        # Lista de causas de muerte de Minecraft (DamageCause, ej. "FALL", "LAVA", "DROWNING") que no cuestan vida
+        # si matan al jugador.
+        # Vacio = ninguna excepcion por causa.
+        #* DamageCause: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+
+    #*# ================================================================
+    #*# DEATH -> VANILLA_MESSAGE: controla el mensaje de muerte que ve TODO
+    #*# el server en el chat cuando alguien muere (el clasico "Fulano murio
+    #*# por...", "Fulano fue asesinado por Zutano usando...").
+    #*# ================================================================
+    vanilla_message:
+      disable: true
+      # TRUE = evita que Minecraft vanilla envie su mensaje de muerte normal por chat (para reemplazarlo por el de
+      # E3V, ver "replace" abajo).
+      # FALSE = deja que Minecraft muestre su mensaje normal, sin tocarlo.
+
+      replace: true
+      # TRUE = E3V envia SU PROPIO mensaje de muerte (configurable en config.yml/Messages) a todos los jugadores y
+      # a la consola, en vez del que traia Minecraft. Solo tiene efecto si "disable" esta en true.
+
+      use_player_locale: true
+      # TRUE = al reemplazar el mensaje, usa la variable %DEATH_MESSAGE% con el texto de muerte YA TRADUCIDO al
+      # idioma de cada cliente (via Adventure), para que se vea igual de "vanilla" que el original pero en el idioma
+      # de cada jugador.
+      # FALSE = usa el mensaje tal cual venga del servidor (normalmente en ingles), sin traducir por jugador.
+
+    #*# ================================================================
+    #*# DEATH -> LOST_LIFE: que pasa visualmente/informativamente cuando un
+    #*# jugador pierde una vida PERO todavia le quedan vidas (no fue
+    #*# eliminado). No confundir con "life_loss" de arriba: eso decide SI se
+    #*# resta la vida; esto decide como se AVISA que se resto.
+    #*# ================================================================
+    lost_life:
+      immediate_respawn: true
+      # TRUE = el jugador respawnea de inmediato al morir, sin pantalla de "Has muerto" / boton de respawn.
+      # FALSE = respawn normal de Minecraft (el jugador debe apretar respawn o esperar).
+
+      keep_inventory: true
+      # TRUE = el jugador conserva su inventario al morir (como si tuviera keepInventory activado, pero solo
+      # para este caso).
+      # FALSE = el inventario se dropea normalmente al morir.
+
+      player:
+        ## Que recibe el JUGADOR QUE MURIO al perder una vida.
+
+        message: true
+        # TRUE = le llega el mensaje configurado (config.yml -> Messages.gameplay.lost_life.player).
+
+        actionbar: true
+        # TRUE = le llega tambien un aviso por actionbar (la barrita de texto sobre la hotbar).
+
+        animation: true
+        # TRUE = se le reproduce la animacion "lost_life" (ver animations.yml), variante "player".
+
+      broadcast:
+        ## Que reciben TODOS LOS DEMAS jugadores online cuando alguien pierde una vida.
+
+        message: true
+        # TRUE = se les envia el mensaje de broadcast (config.yml -> Messages.gameplay.lost_life.broadcast).
+
+        actionbar: false
+        # TRUE = tambien lo verian por actionbar (aqui esta desactivado por defecto).
+
+        animation: true
+        # TRUE = ven/escuchan la animacion "lost_life" (ver animations.yml), variante "broadcast".
+
+    #*# ================================================================
+    #*# DEATH -> ELIMINATED: que pasa cuando el jugador se queda SIN vidas
+    #*# (perdio su ultima vida). Aqui es donde entran cosas como modo
+    #*# espectador y ban temporal/permanente.
+    #*# ================================================================
+    eliminated:
+      immediate_respawn: true
+      # TRUE = respawn inmediato al quedar eliminado (sin pantalla de muerte).
+      # FALSE = respawn manual normal de Minecraft.
+
+      keep_inventory: false
+      # TRUE = conserva el inventario aunque haya sido eliminado.
+      # FALSE = el inventario se dropea normalmente (recomendado para que eliminar a alguien tenga consecuencia real).
+
+      spectator_mode: true
+      # TRUE = al ser eliminado, el jugador queda en modo ESPECTADOR (no puede jugar, pero puede ver la partida)
+      # en vez de quedar libre en survival.
+
+      tp_back_death: true
+      # TRUE = al respawnear como eliminado, se le teletransporta de vuelta al PUNTO EXACTO donde murio (util junto
+      # a spectator_mode, para que "vea" desde donde cayo).
+      # FALSE = respawnea en el punto de spawn normal.
+
+      ban:
+        ## Ban automatico del jugador tras ser eliminado (quedarse sin vidas). Pensado para modos "hardcore" donde
+        ## perder todas las vidas te saca del server.
+
+        enable: true
+        # TRUE = activa el ban automatico al ser eliminado.
+        # FALSE = el jugador queda eliminado (espectador, etc.) pero NUNCA se banea automaticamente.
+
+        after_seconds: 14
+        # Cuantos segundos esperar DESPUES de la eliminacion antes de aplicar el ban (para darle tiempo a ver el
+        # mensaje/animacion antes de ser expulsado).
+        # 0 = banear de inmediato.
+
+      broadcast:
+        ## Que ven los DEMAS jugadores cuando alguien queda eliminado (se queda sin vidas).
+
+        message: true
+        # TRUE = se envia el mensaje de eliminacion a todo el server (config.yml -> Messages.gameplay.eliminated.broadcast).
+
+        actionbar: false
+        # TRUE = tambien se muestra por actionbar a todos.
+
+        animation: true
+        # TRUE = se reproduce la animacion "eliminated" (ver animations.yml), variante "broadcast", a todos los
+        # jugadores.
+
+  #*# ================================================================
+  #*# REVENGE: sistema de venganza. Cuando un jugador muere en PvP, puede
+  #*# quedar "marcado" quien lo mato (y/o sus asistentes) como objetivo de
+  #*# venganza de la victima. Mientras la marca este vigente, la victima
+  #*# tiene ventajas de combate contra ese objetivo, y si logra matarlo antes
+  #*# de que expire, recibe una recompensa.
+  #*# ================================================================
+  revenge:
+    enable: true
+    # TRUE = activa todo el sistema de venganza.
+    # FALSE = lo desactiva por completo (nadie queda marcado, no hay buffs ni recompensas de venganza).
+
+    duration: 20m
+    # Cuanto tiempo dura activa la marca de venganza para la victima antes de expirar. Si expira sin que la victima
+    # logre matar al objetivo, la venganza se pierde (sin recompensa).
+    #* Formato de duracion: ver la nota al inicio (ej. 20m, 1h).
+
+    rules:
+      mark_players: "BOTH"
+      # A quien se marca como objetivo de venganza cuando muere la victima:
+      # "KILLER" = solo a quien dio el golpe final
+      # "ASSISTANTS" = solo a los jugadores que ayudaron a matar (asistencias)
+      # "BOTH" = a ambos (killer + asistentes).
+
+      can_attack_with_pvp_off: true
+      # TRUE = la victima puede atacar a su objetivo de venganza AUNQUE el PvP global del servidor este desactivado
+      # (excepcion puntual solo contra ese jugador marcado).
+      # FALSE = si el PvP global esta apagado, tampoco puede atacar a su objetivo de venganza.
+
+      dont_increment_hazard: true
+      # TRUE = cuando la victima completa su venganza (mata al objetivo marcado), ESA kill en particular no cuenta
+      # para el sistema de hazard (no sube de nivel de peligrosidad por esa muerte).
+      # FALSE = la kill de venganza tambien cuenta normalmente para el hazard.
+
+    messages:
+      ## Que mensajes se le envian AL JUGADOR VENGADOR (la victima original) durante el ciclo de la venganza. Los
+      ## textos se configuran en config.yml, aqui solo se activan/desactivan.
+
+      obtained: true
+      # TRUE = se le avisa cuando consigue una marca de venganza nueva (justo despues de morir).
+
+      expired: true
+      # TRUE = se le avisa cuando una marca de venganza expira sin haberse completado.
+
+      completed: true
+      # TRUE = se le avisa cuando logra completar la venganza (mata al objetivo marcado).
+
+    rewards_actions:
+      ## Acciones que se ejecutan sobre el jugador vengador cuando COMPLETA su venganza (mata a su objetivo marcado).
+
+      - 'player_lifes: +1'
+
+    #*# ================================================================
+    #*# Buffs de combate que recibe la victima contra su objetivo de venganza,
+    #*# segun el NIVEL DE HAZARD que tenia la victima al momento de morir (no
+    #*# el nivel del asesino). Mientras mas bajo su hazard al morir, mas fuerte
+    #*# el buff -- pensado para compensar a quien tenia menos "historial" de
+    #*# kills. Debe existir una entrada aqui por cada nivel definido en
+    #*# hazard.levels de mas abajo (mismo numero de nivel).
+    #*# ================================================================
+    hazard_level_buffs:
+      1:
+        enabled: true
+        # TRUE = los jugadores que mueren estando en hazard nivel 1 reciben este buff de venganza.
+        # FALSE = no reciben ningun buff (aunque revenge.enable este en true).
+
+        strength_percent: 60
+        # % de daño extra que la victima inflige al pegarle a su objetivo de venganza mientras la marca esta vigente.
+
+        resistance_percent: 60
+        # % de resistencia extra (daño reducido) que la victima tiene al recibir daño de su objetivo de venganza
+        # mientras la marca esta vigente.
+
+      2:
+        enabled: true
+        strength_percent: 40
+        resistance_percent: 40
+
+      3:
+        enabled: true
+        strength_percent: 20
+        resistance_percent: 20
+
+      4:
+        enabled: true
+        strength_percent: 0
+        resistance_percent: 0
+
+  #*# ================================================================
+  #*# HAZARD: sistema de "nivel de peligrosidad" por jugador segun cuantas
+  #*# kills lleva acumuladas. A mas nivel, mas visible es el jugador (tag de
+  #*# color sobre su nombre) y mas duras son las penalizaciones si muere
+  #*# estando en ese nivel. El nivel sube al matar jugadores y baja solo con
+  #*# el tiempo (o al morir, si el nivel lo tiene configurado asi).
+  #*# ================================================================
+  hazard:
+    enable: true
+    # TRUE = activa todo el sistema de hazard (niveles, tags, penalizaciones).
+    # FALSE = lo desactiva por completo.
+
+    levels:
+      ## Cada numero (1, 2, 3, 4...) es un nivel de hazard. El nivel 1 es el nivel base con el que arranca todo jugador
+      ## nuevo. Los niveles deben numerarse consecutivos (1, 2, 3, 4) para que la progresion funcione bien.
+
+      1:
+        ## Nivel de peligrosidad BLANCO/base (lo tiene todo el mundo desde que entra al server).
+
+        required_kills: 0
+        # Kills necesarias para llegar a ESTE nivel desde el nivel anterior. En el nivel 1 siempre deberia ser 0, porque
+        # es el nivel inicial (nadie "sube" al nivel 1, ya partiendo ahi).
+
+        tag:
+          ## Prefijo/color que se le pone al nombre del jugador (via Teams de Minecraft) mientras esta en este nivel.
+
+          enabled: false
+          # TRUE = se le muestra el tag (color+prefix) mientras este en este nivel.
+          # FALSE = no se le pone ningun tag especial en este nivel (asi esta por defecto en el nivel 1, para que los
+          # jugadores "limpios" no destaquen).
+
+          bypass: false
+          # TRUE = si el jugador ya pertenece a un Team de OTRO plugin, E3V igual lo mueve a su propio team de hazard.
+          # FALSE (recomendado) = si el jugador ya esta en un team ajeno a E3V, no se le toca (para no chocar con otros
+          # plugins de teams/facciones).
+
+          prefix: "\u2620"
+          # Texto/simbolo que se antepone al nombre del jugador. Podes cambiarlo por cualquier texto corto.
+
+          color: WHITE
+          # Color del nombre/prefix para este nivel. Debe ser un color valido de Minecraft (ej. WHITE, YELLOW, GOLD,
+          # RED, DARK_RED, etc.).
+
+        expiration:
+          ## Cuanto dura el jugador en este nivel antes de bajar automaticamente al nivel anterior por inactividad
+          ## (sin hacer nuevas kills).
+
+          duration: -1
+          # Tiempo que dura el nivel antes de expirar (bajar de nivel).
+          # -1 = infinito, es decir, nunca baja solo por tiempo (el nivel 1 no puede bajar mas igual, porque es el
+          # minimo).
+
+          max_duration: -1
+          # Tope MAXIMO de tiempo acumulado que puede llegar a durar este nivel, aunque el jugador siga sumando
+          # tiempo por stacking (ver stack_duration).
+          # -1 = sin tope.
+
+          stack_duration: false
+          # TRUE = cada vez que vuelve a subir a este nivel, el tiempo restante SE SUMA al que ya tenia (se acumula).
+          # FALSE = cada vez que sube a este nivel, el timer se reinicia desde cero (no se acumula).
+
+        death:
+          ## Que le pasa a ESTE nivel cuando el jugador que lo tiene muere.
+
+          downgrade: false
+          # TRUE = al morir estando en este nivel, el jugador BAJA un nivel automaticamente.
+          # FALSE = morir no le baja el nivel de hazard.
+
+          reset_expiration: false
+          # TRUE = al morir estando en este nivel, se reinicia el timer de expiracion del nivel (como si acabara de
+          # subir a el).
+          # FALSE = morir no afecta el timer.
+
+        penalties_actions: []
+        # Acciones que se ejecutan sobre el jugador cuando MUERE estando en este nivel (ver la lista completa de
+        # acciones disponibles mas abajo, en el nivel 3 y 4 hay ejemplos). Vacio = sin penalizacion por morir en este
+        # nivel.
+
+      2:
+        ## Nivel de peligrosidad AMARILLO (jugadores que ya mataron a alguien).
+
+        enabled: true
+        # TRUE = este nivel esta activo y se puede alcanzar/usar.
+        # FALSE = el nivel queda "deshabilitado": nadie puede subir a el (se salta al siguiente nivel habilitado) y
+        # pierde su tag.
+
+        required_kills: 1
+        # Kills necesarias para subir a este nivel DESDE el nivel anterior (nivel 1 -> nivel 2 con 1 kill).
+
+        tag:
+          enabled: true # Este nivel SI muestra tag sobre el jugador.
+          bypass: false
+          prefix: "\u2620"
+          color: YELLOW
+
+        expiration:
+          duration: 24h # El jugador baja de nivel automaticamente si pasan 24 horas sin sumar otra kill.
+          max_duration: -1
+          stack_duration: false # No se acumula tiempo extra aunque siga matando estando ya en este nivel (mas kills
+                                # solo lo empujan al SIGUIENTE nivel, no alargan este).
+
+        death:
+          downgrade: false # Morir en este nivel no lo baja de nivel (sigue en amarillo aunque muera).
+          reset_expiration: false
+
+        penalties_actions: [] # Sin penalizacion por morir en nivel 2.
+
+      3:
+        ## Nivel de peligrosidad NARANJO (jugadores con varias kills encima).
+        enabled: true
+        required_kills: 1 # 1 kill mas (desde el nivel 2) para llegar aca.
+
+        tag:
+          enabled: true
+          bypass: false
+          prefix: "\u2620"
+          color: GOLD
+
+        expiration:
+          duration: 24h
+          max_duration: -1
+          stack_duration: false
+
+        death:
+          downgrade: false
+          reset_expiration: false
+
+        penalties_actions:
+          ## Que le pasa al jugador si muere estando en nivel 3.
+
+          - 'send_player_message: gameplay.death_hazard_penalty.level_3'
+          # Le envia el mensaje configurado en config.yml -> Messages.gameplay.death_hazard_penalty.level_3
+
+          - 'player_health: -2'
+          # Le resta 2 puntos de vida maxima PERMANENTE (2 puntos = 1 corazon completo; 1 punto = medio corazon).
+          # Esto reduce su barra de vida maxima, no le hace daño puntual.
+
+      4:
+        ## Nivel de peligrosidad ROJO (el mas alto: jugadores que han matado mucho).
+        enabled: true
+        required_kills: 1
+
+        tag:
+          enabled: true
+          bypass: false
+          prefix: "\u2620"
+          color: RED
+
+        expiration:
+          duration: 24h
+          max_duration: -1
+          stack_duration: true  # A diferencia de los otros niveles, aca CADA kill nueva estando ya en nivel 4 SI
+                                # le suma tiempo extra al timer (se va acumulando en vez de reiniciarse).
+
+        death:
+          downgrade: false  # Aunque muera en el nivel maximo, no baja de nivel automaticamente (solo baja por
+                            # expiracion de tiempo).
+          reset_expiration: false
+
+        penalties_actions:
+          ## Penalizaciones al morir en el nivel mas alto (las mas duras del sistema).
+
+          - 'send_player_message: gameplay.death_hazard_penalty.level_4'
+          # Mensaje de aviso (config.yml).
+
+          - 'send_player_animation: lost_slot'
+          # Reproduce la animacion "lost_slot" (ver animations.yml) para avisar visualmente
+          # que perdio un slot de vida permanente.
+
+          - 'player_health: -2'
+          # Resta 2 puntos (1 corazon) de vida maxima permanente, igual que en nivel 3.
+
+          - 'player_life_slots: -1'
+          # Rompe PERMANENTEMENTE 1 "slot" de vida (baja el maximo de vidas que puede llegar a tener
+          # el jugador). Distinto a 'player_lifes', que solo resta vidas actuales recuperables.
+
+    #* --------------------------------------------------------------
+    #* Acciones disponibles para "penalties_actions" (hazard) y
+    #* "rewards_actions" (revenge). Formato: 'clave: valor', una accion
+    #* por linea de la lista.
+    #*
+    #*   player_lifes: +N / -N       -> suma o resta N vidas ACTUALES
+    #*                                  (recuperables). No rompe slots.
+    #*   player_life_slots: +N / -N  -> repara (+) o rompe (-) N "slots"
+    #*                                  de vida PERMANENTES (baja/sube el
+    #*                                  maximo de vidas que puede tener).
+    #*   player_health: +N / -N      -> suma/resta N puntos de vida maxima
+    #*                                  vanilla (1 punto = medio corazon).
+    #*   send_player_message: <ruta> -> envia SOLO al jugador el mensaje
+    #*                                  ubicado en config.yml -> Messages.<ruta>
+    #*   send_player_animation: <nombre> -> dispara la animacion <nombre>
+    #*                                  definida en animations.yml.
+    #* --------------------------------------------------------------
+
+  #*# ================================================================
+  #*# MISCELLANEOUS: ajustes sueltos que no encajan en las secciones de
+  #*# arriba.
+  #*# ================================================================
+  miscellaneous:
+    messages:
+      ## Avisos de conexion/desconexion de jugadores.
+
+      join: true
+      # TRUE = envia un mensaje personalizado de E3V cuando un jugador entra al server (config.yml -> Messages).
+
+      leave: true
+      # TRUE = envia un mensaje personalizado de E3V cuando un jugador sale del server.
+
+    animations:
+      ## Si se reproduce o no la animacion correspondiente (ver animations.yml) cuando cambia el estado global del PvP.
+
+      pvp_on: true
+      # TRUE = se reproduce la animacion "pvp_on" cuando un admin activa el PvP global (/e3v pvp on).
+
+      pvp_off: true
+      # TRUE = se reproduce la animacion "pvp_off" cuando un admin desactiva el PvP global (/e3v pvp off).
+
+    combat:
+      # Ventana de "combate activo" entre dos jugadores (para detectar asistencias en kills, por ejemplo).
+
+      expiration: 10s
+      # Tiempo sin recibir un golpe nuevo para que un combate 1 vs 1 entre dos jugadores se considere terminado.
+      #* Formato de duracion: ver nota al inicio del archivo.

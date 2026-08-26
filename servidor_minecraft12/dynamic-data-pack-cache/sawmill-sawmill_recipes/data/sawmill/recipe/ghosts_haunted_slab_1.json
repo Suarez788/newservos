@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "ghosts:haunted_planks"
+  },
+  "result": {
+    "id": "ghosts:haunted_slab",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

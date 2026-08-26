@@ -1,0 +1,16 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "ghosts:haunted_log"
+    },
+    {
+      "item": "ghosts:stripped_haunted_log"
+    }
+  ],
+  "result": {
+    "id": "furnitury:wooden_block_base",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

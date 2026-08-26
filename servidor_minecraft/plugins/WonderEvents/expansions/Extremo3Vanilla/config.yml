@@ -1,0 +1,209 @@
+Config:
+  #*# La expansion enviara un mensaje a todos los OPs del servidor cuando encuentre una nueva version disponible
+  update_notification: true
+
+Messages:
+  #*# Prefix global. Puedes usar %PREFIX% en cualquier mensaje
+  prefix: "<red>[<white>E3V</white>]</red>"
+
+  #*# Mensajes base del sistema
+  system:
+    no_permission: "%PREFIX% <red>No tienes permiso para ejecutar este comando."
+    player_only: "%PREFIX% <red>Este comando solo puede ser ejecutado por un jugador."
+    console_only: "%PREFIX% <red>Este comando solo puede ser ejecutado desde la consola."
+    invalid_usage: "%PREFIX% <red>Uso incorrecto. Usa <yellow>%usage%</yellow> para más información."
+    update:
+      - "%PREFIX% <green>│ ⚠ NUEVA ACTUALIZACION DISPONIBLE</green>"
+      - "%PREFIX% <green>│ </green>"
+      - "%PREFIX% <green>│ Version disponible:</green> <white>%LATEST%</white>"
+      - "%PREFIX% <green>│ Version actual:</green> <white>%CURRENT%</white>"
+      - "%PREFIX% <green>│ </green>"
+      - "%PREFIX% <green>│ Puedes descargarla en:</green>"
+      - "%PREFIX% <white>%UPDATELINK%</white>"
+
+  #*# Mensajes de comandos
+  command:
+    help:
+      header: "%PREFIX% <gray>Corriendo</gray> <red>Extremo 3 Vanilla</red> <white>%VERSION%</white>"
+      lines:
+        - "<white>></white> <red>/e3v help</red> <gray>-Muestra este mensaje.</gray>"
+        - "<white>></white> <red>/e3v reload</red> <gray>- Recarga la configuración de la expansión.</gray>"
+        - "<white>></white> <red>/e3v modify lifes</red> <gray>- Modifica las vidas de los jugadores.</gray>"
+        - "<white>></white> <red>/e3v modify health</red> <gray>- Modifica los corazones de salud de los jugadores.</gray>"
+        - "<white>></white> <red>/e3v modify hazard</red> <gray>- Modifica las propiedades de la peligrosidad de los jugadores.</gray>"
+        - "<white>></white> <red>/e3v pvp on</red> <gray>- Activa el PvP global del servidor.</gray>"
+        - "<white>></white> <red>/e3v pvp off</red> <gray>- Desactiva el PvP global del servidor.</gray>"
+        - "<white>></white> <red>/e3v animation play</red> <gray>- Reproduce una animación.</gray>"
+        - "<white>></white> <red>/e3v animation stop</red> <gray>- Detiene animaciones activas.</gray>"
+        - "<white>></white> <red>/e3v announce</red> <gray>- Envía un anuncio con animación, chat y sonido.</gray>"
+        - "<white>></white> <red>/e3v revenges</red> <gray>- Muestra tus venganzas activas.</gray>"
+        - "<white>></white> <red>/e3v wanteds</red> <gray>- Muestra quién te está buscando para vengarse.</gray>"
+
+    reload:
+      success: "%PREFIX% <green>Configs recargadas correctamente.</green> <gray>(%TIME%ms)</gray>"
+      failed: "%PREFIX% <red>No se pudieron recargar las configs. Revisa la consola para más información."
+
+    modify:
+      usage: "%PREFIX% <yellow>Uso:</yellow> <white>/e3v modify <lifes|health|hazard> <(lifes: current|broken)|(hazard: level|time)> <player|*> <add|set|remove|reset> <new_value></white>"
+      invalid_category: "%PREFIX% <red>El primer argumento debe ser <yellow>lifes</yellow>, <yellow>health</yellow> o <yellow>hazard</yellow>."
+      invalid_subtype: "%PREFIX% <red>Subtipo inválido. <yellow>lifes</yellow> usa <yellow>current</yellow>/<yellow>broken</yellow>, <yellow>hazard</yellow> usa <yellow>level</yellow>/<yellow>time</yellow>."
+      invalid_action: "%PREFIX% <red>La acción debe ser <yellow>add</yellow>, <yellow>set</yellow>, <yellow>remove</yellow> o <yellow>reset</yellow>."
+      invalid_player: "%PREFIX% <red>No se encontró al jugador <yellow>%PLAYER%</yellow> en la base de datos."
+      invalid_lifes_value: "%PREFIX% <red>El valor de vidas debe ser un número entero."
+      invalid_level_value: "%PREFIX% <red>El valor de nivel debe ser un número entero."
+      invalid_time_value: "%PREFIX% <red>Valor de tiempo inválido. Usa un formato como <yellow>30s</yellow>, <yellow>5m</yellow>, <yellow>12h</yellow>, <yellow>2d</yellow> o <yellow>-1</yellow> (infinito)."
+      invalid_time_infinite_delta: "%PREFIX% <red>No puedes sumar o restar tiempo infinito. Usa <yellow>set</yellow> para eso."
+      invalid_health_value: "%PREFIX% <red>El valor de salud debe ser un número entero de puntos (1 punto = medio corazón, 2 puntos = 1 corazón)."
+      player_not_online: "%PREFIX% <red>El jugador <yellow>%PLAYER%</yellow> no está online. <yellow>health</yellow> solo funciona con jugadores conectados."
+      lifes:
+        success_single: "%PREFIX% <green>Se actualizaron las vidas de <yellow>%PLAYER%</yellow> <gray>(%TYPE% = %VALUE%, %ACTION%)</gray>."
+        success_all: "%PREFIX% <green>Se actualizaron las vidas de <yellow>%COUNT%</yellow> jugadores <gray>(%TYPE% = %VALUE%, %ACTION%)</gray>."
+      health:
+        success_single: "%PREFIX% <green>Salud de <yellow>%PLAYER%</yellow> actualizada a <yellow>%POINTS%</yellow> puntos <gray>(%ACTION%)</gray>."
+        success_all: "%PREFIX% <green>Salud actualizada para <yellow>%COUNT%</yellow> jugadores <gray>(%ACTION%)</gray>."
+      hazard:
+        level:
+          success_single: "%PREFIX% <green>Nivel de hazard de <yellow>%PLAYER%</yellow> actualizado a <yellow>%LEVEL%</yellow> <gray>(%ACTION%)</gray>."
+          success_all: "%PREFIX% <green>Nivel de hazard actualizado para <yellow>%COUNT%</yellow> jugadores <gray>(%ACTION%)</gray>."
+        time:
+          success_single: "%PREFIX% <green>Tiempo de hazard de <yellow>%PLAYER%</yellow> actualizado <gray>(%ACTION%)</gray>. Restante: <yellow>%REMAINING%</yellow>."
+          success_all: "%PREFIX% <green>Tiempo de hazard actualizado para <yellow>%COUNT%</yellow> jugadores <gray>(%ACTION%)</gray>."
+
+    pvp:
+      usage: "%PREFIX% <yellow>Uso:</yellow> <white>/e3v pvp <list|on|off></white>"
+      header: "%PREFIX% <gold><b>PvP activos</b></gold>"
+      empty: "%PREFIX% <gray>No hay combates PvP activos en este momento.</gray>"
+      victim_line: "<white><b>%VICTIM%</b></white> <gray>(%VICTIM_HEALTH%❤)</gray>"
+      attacker_line: "<dark_gray>%BRANCH%</dark_gray> <yellow>%ATTACKER%</yellow> <gray>(%HEALTH%❤ / %TIME%s)</gray>"
+      already_on: "%PREFIX% <yellow>El PvP ya estaba activado.</yellow>"
+      already_off: "%PREFIX% <yellow>El PvP ya estaba desactivado.</yellow>"
+
+    animation:
+      usage: "%PREFIX% <yellow>Uso:</yellow> <white>/e3v animation <play|stop></white>"
+      play:
+        usage: "%PREFIX% <yellow>Uso:</yellow> <white>/e3v animation play <animation> <player|broadcast> <player|*> [sound]</white>"
+        invalid_animation: "%PREFIX% <red>Animación inválida. Usa: <yellow>%ANIMATIONS%</yellow>"
+        invalid_display: "%PREFIX% <red>Display inválido. Usa: <yellow>%DISPLAYS%</yellow>"
+        invalid_target: "%PREFIX% <red>Jugador inválido. Usa <yellow>*</yellow> o un jugador en línea."
+        invalid_sound: "%PREFIX% <red>El parámetro de sonido debe ser <yellow>true</yellow> o <yellow>false</yellow>."
+        success: "%PREFIX% <green>Reproduciendo <yellow>%ANIMATION%</yellow> para <yellow>%TARGET%</yellow>.</green>"
+      stop:
+        usage: "%PREFIX% <yellow>Uso:</yellow> <white>/e3v animation stop [player|*]</white>"
+        invalid_player: "%PREFIX% <red>No encontré al jugador <yellow>%PLAYER%</yellow> en línea.</red>"
+        success_single: "%PREFIX% <green>Deteniendo animaciones para <yellow>%PLAYER%</yellow>.</green>"
+        success_all: "%PREFIX% <green>Deteniendo animaciones para <yellow>%COUNT%</yellow> jugadores.</green>"
+        no_targets: "%PREFIX% <yellow>No hay jugadores en línea para detener animaciones.</yellow>"
+
+    announce:
+      usage: "%PREFIX% <yellow>Uso:</yellow> <white>/e3v announce <difficulty_change|announcement> <player|*> \"<titulo>\" \"<mensaje>\"</white>"
+      invalid_type: "%PREFIX% <red>El primer argumento debe ser <yellow>%TYPES%</yellow>."
+      invalid_target: "%PREFIX% <red>Jugador inválido. Usa <yellow>*</yellow> o un jugador en línea."
+      invalid_format: "%PREFIX% <red>El título y el mensaje deben ir entre comillas dobles, ej: <yellow>\"Título\" \"Mensaje\"</yellow>."
+      no_targets: "%PREFIX% <yellow>No hay jugadores en línea para recibir el anuncio.</yellow>"
+      success: "%PREFIX% <green>Anuncio <yellow>%TYPE%</yellow> enviado a <yellow>%TARGET%</yellow> <gray>(%COUNT% jugador(es))</gray>.</green>"
+
+    revive:
+      usage: "%PREFIX% <yellow>Uso:</yellow> <white>/e3v revive <player|*></white>"
+      invalid_player: "%PREFIX% <red>No se encontró al jugador <yellow>%PLAYER%</yellow> en la base de datos."
+      success_single: "%PREFIX% <green>Revivido <yellow>%PLAYER%</yellow>. <gray>%STATUS%</gray>"
+      success_all: "%PREFIX% <green>Revividos <yellow>%COUNT%</yellow> jugadores de la base de datos.</green>"
+      status:
+        alive_stats_only: "Ya estaba vivo, solo se reiniciaron sus vidas y su nivel de hazard."
+        teleported_now: "Estaba en espectador: se lo revivió y teletransportó a su spawnpoint ahora mismo."
+        queued_for_join: "Estaba desconectado: se lo revivirá y teletransportará a su spawnpoint apenas vuelva a conectarse."
+
+    revenges:
+      header: "%PREFIX% <dark_red><st>---------</st></dark_red> <red><b>Venganzas activas</b> (%COUNT%)</red> <dark_red><st>-------------</st></dark_red>"
+      entry: |-
+        <b>%PLAYER%</b> <gray>(%TIME_LEFT%)</gray>
+        <gray>></gray> <green>+%STRENGTH_PERCENT%% de fuerza extra</green>
+        <gray>></gray> <green>+%RESISTANCE_PERCENT%% de resistencia extra</green>
+      no_entrys: "<gray>No tienes ninguna venganza activa...</gray>"
+      footer: "<dark_red><st>---------------</st></dark_red> <b><gray>%BACK_BUTTON%</gray></b> <red>Página <white>%PAGE%</white> de <white>%PAGES%</white></red> <gray><b>%NEXT_BUTTON%</b></gray> <dark_red><st>---------------</st></dark_red>"
+
+    wanteds:
+      header: "%PREFIX% <gold><st>---------</st></gold> <yellow><b>Búsquedas activas</b> (%COUNT%)</yellow> <gold><st>-------------</st></gold>"
+      entry: |-
+        <b>%PLAYER%</b> <gray>(%TIME_LEFT%)</gray>
+        <gray>></gray> <red>-%STRENGTH_PERCENT%% de fuerza</red>
+        <gray>></gray> <red>-%RESISTANCE_PERCENT%% de resistencia</red>
+      no_entrys: "<gray>No eres buscado por nadie...</gray>"
+      footer: "<gold><st>---------------</st></gold> <b><gray>%BACK_BUTTON%</gray></b> <yellow>Página <white>%PAGE%</white> de <white>%PAGES%</white></yellow> <gray><b>%NEXT_BUTTON%</b></gray> <gold><st>---------------</st></gold>"
+
+  #*# Mensajes de gameplay
+  gameplay:
+    join: "<gradient:#648C64:#8C8C8C>>> <b>%PLAYER%</b> se ha conectado</gradient>"
+    leave: "<gradient:#8C6464:#8C8C8C><< <b>%PLAYER%</b> se ha desconectado</gradient>"
+    revenge:
+      obtained: "<green>Tienes %TIME% para vengarte de %KILLER%, matalo y recuperarás tu vida.</green>"
+      expired: "<yellow>Tu venganza contra %KILLER% ha expirado. Ya no puedes vengarte de él.</yellow>"
+      completed: "<green>¡Venganza completada! Has matado a %KILLER% y recuperaste tu vida.</green>"
+    lost_life:
+      player: "<yellow>Estás un paso más cerca de la muerte. Has perdido una vida. Te quedan %LIFES%.</yellow>"
+      broadcast: "<white><b>%PLAYER%</b></white> <yellow>ha perdido una vida. (%LIFES%/5)</yellow>"
+    last_life: "<red>¡Es tu ULTIMA vida! Si mueres, no volverás a este mundo... nunca más.</red>"
+    eliminated: "<white><b>%PLAYER%</b></white> <red>ha perdido todas sus vidas y fue eliminado.</red> <yellow><b>¡GG!</b></yellow>"
+    ban_eliminated: |
+      &c☠ &e&l¡GG! &r&c☠
+
+      &7Has perdido todas tus vidas. Tu aventura ha terminado.
+    death_replacement:
+      no-assists: "<white>%DEATH_MESSAGE%</white>"
+      assists:
+        less_than_3: "<white>%DEATH_MESSAGE%</white> <gray>(Asistencias: %ASSISTS%)</gray>"
+        more_than_3: "<white>%DEATH_MESSAGE%</white> <gray>(Asistencias: %ASSISTS%, y %LEFT% más)</gray>"
+    death_hazard_penalty: 
+      level_3: "<red>Has perdido permanentemente un corazón de tu barra de salud debido a tu peligrosidad NARANJA.</red>"
+      level_4: "<red>Has perdido permanentemente un corazón de tu barra de salud y un slot de vida debido a tu peligrosidad ROJA.</red>"
+
+  #*# Mensajes de eventos
+  events:
+    pvp_on:
+      - ""
+      - "<red><b>\u25B6 PVP ACTIVADO:</b></red>"
+      - ""
+      - "<color:#d77989>El PvP ha sido activado. Durante este período podrás golpear a otros jugadores. Si tienes una Venganza activa, podras combatir incluso con el PvP desactivado.</color>"
+      - ""
+    pvp_off:
+      - ""
+      - "<yellow><b>\u25B6 PVP DESACTIVADO:</b></yellow>"
+      - ""
+      - "<color:#f4eecb>El PvP ha sido desactivado. Si tienes una Venganza activa, podras combatir incluso con el PvP desactivado hasta que se acabe el tiempo.</color>"
+      - ""
+    difficulty_change:
+      - ""
+      - "<red><b>\u25B6 %TITLE%</b></red>"
+      - ""
+      - "<white>%MESSAGE%</white>"
+      - ""
+    announcement:
+      - ""
+      - "<red><b>\u25B6 %TITLE%</b></red>"
+      - ""
+      - "<white>%MESSAGE%</white>"
+      - ""
+
+  #*# Valores que devuelven ciertos placeholders de PlaceholderAPI
+  placeholders:
+    server_pvpstatus:
+      enabled: "<red>PvP Activado</red>"
+      disabled: "<green>PvP Desactivado</green>"
+    player_wantedft:
+      wanted: " <gold>(Buscado)</gold>"
+      not_wanted: ""
+    player_hazardftime:
+      level_1: "<white>Neutral</white>"
+      level_2:
+        countdown: "<yellow>%DD%:%HH%:%MM%:%SS%</yellow>"
+        infinite: "<yellow>∞</yellow>"
+      level_3:
+        countdown: "<gold>%DD%:%HH%:%MM%:%SS%</gold>"
+        infinite: "<gold>∞</gold>"
+      level_4:
+        countdown: "<red>%DD%:%HH%:%MM%:%SS%</red>"
+        infinite: "<red>∞</red>"
+    player_hazardprefix:
+      level_1: "&f"
+      level_2: "&e\u2620 "
+      level_3: "&6\u2620 "
+      level_4: "&c\u2620 "

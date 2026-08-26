@@ -1,0 +1,16 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "mynethersdelight:powdery_block"
+    },
+    {
+      "item": "mynethersdelight:stripped_powdery_block"
+    }
+  ],
+  "result": {
+    "id": "farm_and_charm:sturdy_ladder",
+    "count": 3
+  },
+  "type": "sawmill:woodcutting"
+}

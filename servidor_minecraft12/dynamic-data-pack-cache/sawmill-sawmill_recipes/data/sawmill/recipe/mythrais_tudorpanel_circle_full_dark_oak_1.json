@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:oak_planks"
+  },
+  "result": {
+    "id": "mythrais:tudorpanel_circle_full_dark_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "biomeswevegone:redwood_log"
+    },
+    {
+      "item": "biomeswevegone:redwood_wood"
+    },
+    {
+      "item": "biomeswevegone:stripped_redwood_log"
+    },
+    {
+      "item": "biomeswevegone:stripped_redwood_wood"
+    }
+  ],
+  "result": {
+    "id": "meadow:wooden_flower_pot_big",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

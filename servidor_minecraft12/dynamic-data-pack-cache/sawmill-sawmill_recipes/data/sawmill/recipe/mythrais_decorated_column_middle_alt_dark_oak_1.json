@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:oak_planks"
+  },
+  "result": {
+    "id": "mythrais:decorated_column_middle_alt_dark_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

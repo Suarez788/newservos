@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "ghosts:haunted_planks"
+  },
+  "result": {
+    "id": "supplementaries:ghosts/way_sign_haunted",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

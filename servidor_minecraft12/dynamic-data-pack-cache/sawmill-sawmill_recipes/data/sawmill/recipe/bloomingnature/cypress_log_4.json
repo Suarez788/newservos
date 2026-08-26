@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "bloomingnature:cypress_wood"
+  },
+  "result": {
+    "id": "bloomingnature:stripped_cypress_wood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

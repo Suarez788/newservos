@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "meadow:pine_log"
+    },
+    {
+      "item": "meadow:pine_wood"
+    },
+    {
+      "item": "meadow:stripped_pine_log"
+    },
+    {
+      "item": "meadow:stripped_pine_wood"
+    }
+  ],
+  "result": {
+    "id": "meadow:pine_cheese_rack",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

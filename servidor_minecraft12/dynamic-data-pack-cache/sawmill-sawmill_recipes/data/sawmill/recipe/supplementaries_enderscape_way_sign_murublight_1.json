@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "enderscape:murublight_planks"
+  },
+  "result": {
+    "id": "supplementaries:enderscape/way_sign_murublight",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

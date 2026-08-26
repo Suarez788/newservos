@@ -1,0 +1,23 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "enderscape:veiled_log"
+    },
+    {
+      "item": "enderscape:veiled_wood"
+    },
+    {
+      "item": "enderscape:stripped_veiled_log"
+    },
+    {
+      "item": "enderscape:stripped_veiled_wood"
+    }
+  ],
+  "result": {
+    "id": "shieldexp:wooden_shield",
+    "count": 1
+  },
+  "ingredient_count": 2,
+  "type": "sawmill:woodcutting"
+}

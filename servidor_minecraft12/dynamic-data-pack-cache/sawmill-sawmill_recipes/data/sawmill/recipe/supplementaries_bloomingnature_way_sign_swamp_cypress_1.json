@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "bloomingnature:swamp_cypress_planks"
+  },
+  "result": {
+    "id": "supplementaries:bloomingnature/way_sign_swamp_cypress",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

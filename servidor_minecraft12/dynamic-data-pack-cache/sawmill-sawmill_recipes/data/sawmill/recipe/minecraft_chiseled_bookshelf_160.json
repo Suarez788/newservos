@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:baobab_log"
+    },
+    {
+      "item": "bloomingnature:baobab_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_baobab_log"
+    },
+    {
+      "item": "bloomingnature:stripped_baobab_wood"
+    }
+  ],
+  "result": {
+    "id": "minecraft:chiseled_bookshelf",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

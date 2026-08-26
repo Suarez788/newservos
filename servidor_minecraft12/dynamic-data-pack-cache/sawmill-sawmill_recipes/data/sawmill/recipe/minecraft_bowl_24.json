@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:cypress_log"
+    },
+    {
+      "item": "bloomingnature:cypress_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_cypress_log"
+    },
+    {
+      "item": "bloomingnature:stripped_cypress_wood"
+    }
+  ],
+  "result": {
+    "id": "minecraft:bowl",
+    "count": 6
+  },
+  "type": "sawmill:woodcutting"
+}

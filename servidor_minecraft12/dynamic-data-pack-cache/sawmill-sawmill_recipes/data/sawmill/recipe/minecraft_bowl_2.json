@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "netherexp:cerebrage_claret_stem"
+    },
+    {
+      "item": "netherexp:cerebrage_claret_hyphae"
+    },
+    {
+      "item": "netherexp:stripped_claret_stem"
+    },
+    {
+      "item": "netherexp:stripped_claret_hyphae"
+    }
+  ],
+  "result": {
+    "id": "minecraft:bowl",
+    "count": 3
+  },
+  "type": "sawmill:woodcutting"
+}

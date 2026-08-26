@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "minecraft:mangrove_log"
+    },
+    {
+      "item": "minecraft:mangrove_wood"
+    },
+    {
+      "item": "minecraft:stripped_mangrove_log"
+    },
+    {
+      "item": "minecraft:stripped_mangrove_wood"
+    }
+  ],
+  "result": {
+    "id": "mythrais:hammer_beam_upper_centre_dark_oak",
+    "count": 4
+  },
+  "type": "sawmill:woodcutting"
+}

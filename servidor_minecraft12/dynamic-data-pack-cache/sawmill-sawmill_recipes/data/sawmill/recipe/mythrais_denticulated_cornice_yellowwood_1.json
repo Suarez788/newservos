@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:mangrove_planks"
+  },
+  "result": {
+    "id": "mythrais:denticulated_cornice_yellowwood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

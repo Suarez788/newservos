@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:swamp_cypress_log"
+    },
+    {
+      "item": "bloomingnature:swamp_cypress_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_swamp_cypress_log"
+    },
+    {
+      "item": "bloomingnature:stripped_swamp_cypress_wood"
+    }
+  ],
+  "result": {
+    "id": "supplementaries:bloomingnature/way_sign_swamp_cypress",
+    "count": 4
+  },
+  "type": "sawmill:woodcutting"
+}

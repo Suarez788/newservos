@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "enderscape:veiled_planks"
+  },
+  "result": {
+    "id": "enderscape:veiled_slab",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

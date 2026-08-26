@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:bamboo_planks"
+  },
+  "result": {
+    "id": "mythrais:roof_bargeboard_centre_45_grey_slate",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

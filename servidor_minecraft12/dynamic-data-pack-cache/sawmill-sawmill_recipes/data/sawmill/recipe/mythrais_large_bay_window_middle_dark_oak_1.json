@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:mangrove_planks"
+  },
+  "result": {
+    "id": "mythrais:large_bay_window_middle_dark_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

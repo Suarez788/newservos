@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "bloomingnature:chestnut_planks"
+  },
+  "result": {
+    "id": "bloomingnature:chestnut_button",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

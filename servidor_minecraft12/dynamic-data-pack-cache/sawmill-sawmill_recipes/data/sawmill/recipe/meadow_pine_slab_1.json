@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "meadow:pine_planks"
+  },
+  "result": {
+    "id": "meadow:pine_slab",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

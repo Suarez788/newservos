@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "bloomingnature:swamp_oak_planks"
+  },
+  "result": {
+    "id": "bloomingnature:swamp_oak_slab",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

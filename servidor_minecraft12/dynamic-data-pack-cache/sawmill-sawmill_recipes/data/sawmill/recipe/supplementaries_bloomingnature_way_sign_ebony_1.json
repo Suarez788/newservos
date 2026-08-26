@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "bloomingnature:ebony_planks"
+  },
+  "result": {
+    "id": "supplementaries:bloomingnature/way_sign_ebony",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

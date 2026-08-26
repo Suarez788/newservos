@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "enderscape:celestial_planks"
+  },
+  "result": {
+    "id": "enderscape:celestial_button",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

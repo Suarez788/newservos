@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:spruce_planks"
+  },
+  "result": {
+    "id": "mythrais:roof_bargeboard_upper_right_67_old_gold",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

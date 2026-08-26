@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "bloomingnature:aspen_log"
+  },
+  "result": {
+    "id": "bloomingnature:stripped_aspen_wood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

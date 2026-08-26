@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:bamboo_planks"
+  },
+  "result": {
+    "id": "mythrais:bargeboard_straight_doublecurve_brown",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

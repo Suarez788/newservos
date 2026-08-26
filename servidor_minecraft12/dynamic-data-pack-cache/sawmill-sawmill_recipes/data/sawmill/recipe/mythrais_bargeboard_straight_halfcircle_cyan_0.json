@@ -1,0 +1,16 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "minecraft:bamboo_block"
+    },
+    {
+      "item": "minecraft:stripped_bamboo_block"
+    }
+  ],
+  "result": {
+    "id": "mythrais:bargeboard_straight_halfcircle_cyan",
+    "count": 4
+  },
+  "type": "sawmill:woodcutting"
+}

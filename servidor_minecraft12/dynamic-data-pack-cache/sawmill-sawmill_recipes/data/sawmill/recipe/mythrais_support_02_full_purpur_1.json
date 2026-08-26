@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:jungle_planks"
+  },
+  "result": {
+    "id": "mythrais:support_02_full_purpur",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

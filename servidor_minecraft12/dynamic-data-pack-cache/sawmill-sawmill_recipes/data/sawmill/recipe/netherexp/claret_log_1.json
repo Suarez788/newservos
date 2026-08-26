@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "netherexp:cerebrage_claret_stem"
+  },
+  "result": {
+    "id": "netherexp:stripped_claret_hyphae",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

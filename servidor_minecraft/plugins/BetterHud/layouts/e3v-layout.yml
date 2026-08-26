@@ -1,0 +1,243 @@
+e3v_upscreen_layout:
+  texts:
+    1:
+      name: e3v_upscreen_font
+      pattern: "<white>X: [papi:player_x]  Y: [papi:player_y]  Z: [papi:player_z]"
+      align: center
+      space: 0.8
+      outline: true
+      x: 0
+      y: 35
+    2:
+      name: e3v_upscreen_font
+      pattern: "[papi:e3v_server_pvpstatus][papi:e3v_player_wantedft]"
+      align: center
+      space: 0.8
+      outline: true
+      x: 0
+      y: 43
+
+e3v_uphearts_layout:
+  images:
+    # SLOT 1
+    10:
+      name: e3v_heart_full
+      x: -30
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 1
+          operation: ">="
+
+    11:
+      name: e3v_heart_void
+      x: -30
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 1
+          operation: "<"
+        2:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 5
+          operation: "<"
+
+    12:
+      name: e3v_heart_broken
+      x: -30
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 5
+          operation: ">="
+
+    # SLOT 2
+    20:
+      name: e3v_heart_full
+      x: -15
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 2
+          operation: ">="
+
+    21:
+      name: e3v_heart_void
+      x: -15
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 2
+          operation: "<"
+        2:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 4
+          operation: "<"
+
+    22:
+      name: e3v_heart_broken
+      x: -15
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 4
+          operation: ">="
+          
+    # SLOT 3
+    30:
+      name: e3v_heart_full
+      x: 0
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 3
+          operation: ">="
+
+    31:
+      name: e3v_heart_void
+      x: 0
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 3
+          operation: "<"
+        2:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 3
+          operation: "<"
+
+    32:
+      name: e3v_heart_broken
+      x: 0
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 3
+          operation: ">="
+
+    # SLOT 4
+    40:
+      name: e3v_heart_full
+      x: 15
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 4
+          operation: ">="
+
+    41:
+      name: e3v_heart_void
+      x: 15
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 4
+          operation: "<"
+        2:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 2
+          operation: "<"
+
+    42:
+      name: e3v_heart_broken
+      x: 15
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 2
+          operation: ">="
+
+    # SLOT 5
+    50:
+      name: e3v_heart_full
+      x: 30
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 5
+          operation: ">="
+
+    51:
+      name: e3v_heart_void
+      x: 30
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_current_lifes"
+          second: 5
+          operation: "<"
+        2:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 1
+          operation: "<"
+
+    52:
+      name: e3v_heart_broken
+      x: 30
+      y: 20
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_broken_lifes"
+          second: 1
+          operation: ">="
+
+e3v_downhazards_layout:
+  images:
+    1:
+      name: e3v_hazard_lvl1
+      x: 105
+      y: -19
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_hazard_level"
+          second: 1
+          operation: "<="
+    2:
+      name: e3v_hazard_lvl2
+      x: 105
+      y: -19
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_hazard_level"
+          second: 2
+          operation: "=="
+    3:
+      name: e3v_hazard_lvl3
+      x: 105
+      y: -19
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_hazard_level"
+          second: 3
+          operation: "=="
+    4:
+      name: e3v_hazard_lvl4
+      x: 105
+      y: -19
+      conditions:
+        1:
+          first: "(number)papi:e3v_datavalue_hazard_level"
+          second: 4
+          operation: ">="
+  texts:
+    1:
+      name: e3v_downscreen_font
+      pattern: "[papi:e3v_player_hazardftime]"
+      align: left
+      space: 0.8
+      outline: true
+      x: 125
+      y: -15

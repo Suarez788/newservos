@@ -1,0 +1,11 @@
+{
+  "group": "logs",
+  "ingredient": {
+    "tag": "minecraft:logs"
+  },
+  "result": {
+    "id": "kaleidoscope_tavern:stepladder",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

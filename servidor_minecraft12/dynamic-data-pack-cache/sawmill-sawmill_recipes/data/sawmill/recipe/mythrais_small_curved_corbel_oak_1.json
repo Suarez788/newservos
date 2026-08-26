@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:oak_planks"
+  },
+  "result": {
+    "id": "mythrais:small_curved_corbel_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "enderscape:celestial_stem"
+    },
+    {
+      "item": "enderscape:celestial_hyphae"
+    },
+    {
+      "item": "enderscape:stripped_celestial_stem"
+    },
+    {
+      "item": "enderscape:stripped_celestial_hyphae"
+    }
+  ],
+  "result": {
+    "id": "enderscape:celestial_button",
+    "count": 4
+  },
+  "type": "sawmill:woodcutting"
+}

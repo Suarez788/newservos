@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "luminous_nether:withered_log"
+    },
+    {
+      "item": "luminous_nether:withered_wood"
+    },
+    {
+      "item": "luminous_nether:stripped_withered_log"
+    },
+    {
+      "item": "luminous_nether:stripped_withered_wood"
+    }
+  ],
+  "result": {
+    "id": "farmersdelight:cutting_board",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

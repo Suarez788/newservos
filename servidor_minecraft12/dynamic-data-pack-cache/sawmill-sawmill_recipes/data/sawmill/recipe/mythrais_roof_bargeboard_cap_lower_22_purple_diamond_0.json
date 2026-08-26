@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "minecraft:cherry_log"
+    },
+    {
+      "item": "minecraft:cherry_wood"
+    },
+    {
+      "item": "minecraft:stripped_cherry_log"
+    },
+    {
+      "item": "minecraft:stripped_cherry_wood"
+    }
+  ],
+  "result": {
+    "id": "mythrais:roof_bargeboard_cap_lower_22_purple_diamond",
+    "count": 4
+  },
+  "type": "sawmill:woodcutting"
+}

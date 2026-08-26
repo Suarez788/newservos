@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:ebony_log"
+    },
+    {
+      "item": "bloomingnature:ebony_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_ebony_log"
+    },
+    {
+      "item": "bloomingnature:stripped_ebony_wood"
+    }
+  ],
+  "result": {
+    "id": "minecraft:wooden_hoe",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

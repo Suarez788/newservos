@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "bloomingnature:ebony_wood"
+  },
+  "result": {
+    "id": "bloomingnature:stripped_ebony_wood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

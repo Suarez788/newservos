@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:swamp_oak_log"
+    },
+    {
+      "item": "bloomingnature:swamp_oak_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_swamp_oak_log"
+    },
+    {
+      "item": "bloomingnature:stripped_swamp_oak_wood"
+    }
+  ],
+  "result": {
+    "id": "farm_and_charm:water_trough",
+    "count": 3
+  },
+  "type": "sawmill:woodcutting"
+}

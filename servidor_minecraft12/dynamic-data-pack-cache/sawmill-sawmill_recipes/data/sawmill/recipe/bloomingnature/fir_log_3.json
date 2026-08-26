@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "bloomingnature:fir_wood"
+  },
+  "result": {
+    "id": "bloomingnature:fir_log",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

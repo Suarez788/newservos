@@ -1,0 +1,263 @@
+#*# ==============================================================
+#*#  ANIMATIONS.YML - Extremo 3 Vanilla (E3V)
+#*#  Define COMO se ve/suena cada animacion del plugin (perder vida, ser
+#*#  eliminado, activar/desactivar PvP, cambio de dificultad, anuncios).
+#*#
+#*#  Cada animacion se define UNA SOLA VEZ pero controla dos "variantes"
+#*#  por separado:
+#*#    - player     -> lo que ve/escucha el jugador AFECTADO por el evento
+#*#                    (ej. quien murio, quien perdio la vida).
+#*#    - broadcast  -> lo que ven/escuchan TODOS LOS DEMAS jugadores online.
+#*#
+#*#  Campos por animacion:
+#*#    display.player / display.broadcast:
+#*#        Donde se muestra la animacion para cada variante. Valores
+#*#        validos: TITLE, SUBTITLE, SCOREBOARD, ACTIONBAR, o NULL para no
+#*#        mostrar nada a ese target (si display es NULL, igual puede
+#*#        sonar el sonido configurado, si tiene uno).
+#*#    sounds.player / sounds.broadcast:
+#*#        sounds.<variante>.animation     -> sonido que suena AL EMPEZAR
+#*#                                           la animacion (primer frame).
+#*#        sounds.<variante>.chat_message  -> sonido que suena junto al
+#*#                                           mensaje de chat de ese evento
+#*#                                           (no al iniciar la animacion,
+#*#                                           sino cuando el mensaje de
+#*#                                           texto realmente se envia).
+#*#        Cada uno de estos dos bloques tiene:
+#*#          sound   -> ID del sonido (namespace:ruta, ej. resource pack
+#*#                     propio "zyphere3v:sfx/..." o un sonido vanilla
+#*#                     como "entity.player.levelup").
+#*#          channel -> categoria de volumen de Minecraft: master, music,
+#*#                     record, weather, block, hostile, neutral, player,
+#*#                     ambient, voice. (Debe coincidir con la categoria
+#*#                     de sonido que el JUGADOR tenga subida en sus
+#*#                     opciones de audio para que lo escuche fuerte).
+#*#          volume  -> volumen del sonido (numero, tipicamente 1-10).
+#*#          pitch   -> tono del sonido (1 = normal, mas alto = mas agudo,
+#*#                     mas bajo = mas grave). Rango tipico 0.5 - 2.0.
+#*#        Si no quieres sonido en un bloque, dejalo como lista vacia: []
+#*#        (asi esta usado en varios lugares de este archivo).
+#*#
+#*#  Nota sobre pvp_on/pvp_off/difficulty_change/announcement: llevan
+#*#  ademas un "chat_message" con su propio sonido, porque estas
+#*#  animaciones normalmente van acompañadas de un mensaje de chat (ej.
+#*#  "El PvP ha sido activado"), y ese sonido de notificacion suena junto
+#*#  al mensaje, no junto a la animacion visual.
+#*# ==============================================================
+
+Animations:
+  lost_life:
+    ## Se reproduce cuando un jugador PIERDE UNA VIDA (pero sigue con vidas
+    ## de sobra, no fue eliminado). Ver Gameplay.death.lost_life en
+    ## gameplay.yml para activar/desactivar cada variante.
+
+    display:
+      player: TITLE
+      # El jugador que perdio la vida ve la animacion como TITLE
+      # (pantalla grande centrada).
+
+      broadcast: TITLE
+      # El resto del server tambien la ve como TITLE.
+
+    sounds:
+      player:
+        animation:
+          sound: "zyphere3v:sfx/lost_life_player"
+          # Sonido que escucha SOLO el jugador que murio, al empezar la
+          # animacion.
+
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+        chat_message: []
+        # Este evento no manda mensaje de chat con sonido propio; queda vacio.
+
+      broadcast:
+        animation:
+          sound: "zyphere3v:sfx/lost_life"
+          # Sonido que escuchan los demas jugadores online.
+
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+        chat_message: []
+
+  lost_slot:
+    ## Se reproduce cuando el hazard nivel 4 le rompe un "slot" de vida
+    ## permanente a un jugador al morir (ver
+    ## Gameplay.hazard.levels.4.penalties_actions en gameplay.yml).
+
+    display:
+      player: TITLE
+      # El jugador afectado ve el aviso como TITLE.
+
+      broadcast: NULL
+      # Los demas jugadores NO ven nada (es un aviso privado,
+      # no un evento publico).
+
+    sounds:
+      player:
+        animation:
+          sound: "zyphere3v:sfx/lost_slot_player"
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+        chat_message: []
+
+      broadcast:
+        animation: []
+        # Sin sonido para el resto del server.
+
+        chat_message: []
+
+  eliminated:
+    ## Se reproduce cuando un jugador es ELIMINADO (se queda sin vidas). Ver
+    ## Gameplay.death.eliminated en gameplay.yml.
+
+    display:
+      player: NULL
+      # No aplica variante "player" individual (es un evento global,
+      # no de un jugador especifico).
+
+      broadcast: TITLE
+      # Todo el server ve el TITLE de "Eliminacion".
+
+    sounds:
+      player:
+        animation: []
+
+        chat_message: []
+
+      broadcast:
+        animation:
+          sound: "zyphere3v:sfx/eliminated"
+          # Sonido dramatico para todo el server al ver la eliminacion.
+
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+        chat_message: []
+
+  pvp_on:
+    ## Se reproduce cuando un admin ACTIVA el PvP global (/e3v pvp on). Ver
+    ## Gameplay.miscellaneous.animations.pvp_on en gameplay.yml.
+
+    display:
+      player: NULL
+      # No aplica variante "player" individual (es un evento global,
+      # no de un jugador especifico).
+
+      broadcast: TITLE
+      # Todo el server ve el TITLE de "PvP activado".
+
+    sounds:
+      player:
+        animation: []
+
+        chat_message: []
+
+      broadcast:
+        animation:
+          sound: "zyphere3v:sfx/pvp_on"
+          # Sonido que acompaña el TITLE al activarse el PvP.
+
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+        chat_message:
+          ## Sonido de notificacion que suena justo cuando se envia el
+          ## mensaje de chat "PvP activado" (por separado del sonido de
+          ## arriba).
+
+          sound: "zyphere3v:sfx/chat_notify"
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+  pvp_off:
+    ## Se reproduce cuando un admin DESACTIVA el PvP global (/e3v pvp off).
+
+    display:
+      player: NULL
+
+      broadcast: TITLE
+
+    sounds:
+      player:
+        animation: []
+
+        chat_message: []
+
+      broadcast:
+        animation:
+          sound: "zyphere3v:sfx/pvp_off"
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+        chat_message:
+          sound: "zyphere3v:sfx/chat_notify"
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+  difficulty_change:
+    ## Se reproduce con /e3v announce: un anuncio de cambio de dificultad a todo el
+    ## server, mostrado en el TITLE (para taparles toda la pantalla).
+
+    display:
+      player: NULL
+
+      broadcast: TITLE
+
+    sounds:
+      player:
+        animation: []
+
+        chat_message: []
+
+      broadcast:
+        animation:
+          sound: "zyphere3v:sfx/difficulty_change"
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+        chat_message:
+          sound: "zyphere3v:sfx/chat_notify"
+          channel: "voice"
+          volume: 4
+          pitch: 1
+
+  announcement:
+    ## Se reproduce con /e3v announce: un anuncio manual de admin a todo el
+    ## server, mostrado en la ACTIONBAR (no TITLE, para no tapar la pantalla).
+
+    display:
+      player: NULL
+
+      broadcast: ACTIONBAR
+      # Todo el server ve el anuncio en la barra sobre la hotbar.
+
+    sounds:
+      player:
+        animation: []
+
+        chat_message: []
+
+      broadcast:
+        animation: []
+        # Sin sonido al iniciar el anuncio.
+
+        chat_message:
+          ## Sonido de notificacion junto al mensaje de chat del anuncio.
+
+          sound: "zyphere3v:sfx/chat_notify"
+          channel: "voice"
+          volume: 4
+          pitch: 1

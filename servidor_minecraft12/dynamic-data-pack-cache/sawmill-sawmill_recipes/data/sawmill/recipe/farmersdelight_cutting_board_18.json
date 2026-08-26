@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:chestnut_log"
+    },
+    {
+      "item": "bloomingnature:chestnut_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_chestnut_log"
+    },
+    {
+      "item": "bloomingnature:stripped_chestnut_wood"
+    }
+  ],
+  "result": {
+    "id": "farmersdelight:cutting_board",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

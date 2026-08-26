@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "minecraft:oak_log"
+    },
+    {
+      "item": "minecraft:oak_wood"
+    },
+    {
+      "item": "minecraft:stripped_oak_log"
+    },
+    {
+      "item": "minecraft:stripped_oak_wood"
+    }
+  ],
+  "result": {
+    "id": "mythrais:tudorpanel_cross_full_dark_oak",
+    "count": 4
+  },
+  "type": "sawmill:woodcutting"
+}

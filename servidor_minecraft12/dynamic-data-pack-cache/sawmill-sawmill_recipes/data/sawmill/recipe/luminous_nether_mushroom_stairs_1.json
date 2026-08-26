@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "luminous_nether:mushroom_planks"
+  },
+  "result": {
+    "id": "luminous_nether:mushroom_stairs",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:mangrove_planks"
+  },
+  "result": {
+    "id": "mythrais:gothic_corbel_single_dark_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

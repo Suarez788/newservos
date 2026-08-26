@@ -1,0 +1,7 @@
+# *# Estos son datos internos que usa E3V para algunas cosas.
+# !# NO TOQUES NADA DE ESTO SI NO SABES QUE ESTAS HACIENDO!!!
+
+pvp_on: '01100110'
+config_ver: '00110001'
+gameplay_ver: '00110001'
+anims_ver: '00110001'

@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:aspen_log"
+    },
+    {
+      "item": "bloomingnature:aspen_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_aspen_log"
+    },
+    {
+      "item": "bloomingnature:stripped_aspen_wood"
+    }
+  ],
+  "result": {
+    "id": "farm_and_charm:silo_wood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "luminous_nether:mushroom_planks"
+  },
+  "result": {
+    "id": "minecraft:bowl",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

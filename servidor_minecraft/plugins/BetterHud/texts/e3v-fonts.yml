@@ -1,0 +1,8 @@
+e3v_upscreen_font:
+  merge-default-bitmap: true
+  scale: 6
+  include: []
+e3v_downscreen_font:
+  merge-default-bitmap: true
+  scale: 7
+  include: []

@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "luminous_nether:goldmushroom"
+  },
+  "result": {
+    "id": "luminous_nether:goldenstem",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,23 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "enderscape:murublight_stem"
+    },
+    {
+      "item": "enderscape:murublight_hyphae"
+    },
+    {
+      "item": "enderscape:stripped_murublight_stem"
+    },
+    {
+      "item": "enderscape:stripped_murublight_hyphae"
+    }
+  ],
+  "result": {
+    "id": "shieldexp:wooden_shield",
+    "count": 1
+  },
+  "ingredient_count": 2,
+  "type": "sawmill:woodcutting"
+}

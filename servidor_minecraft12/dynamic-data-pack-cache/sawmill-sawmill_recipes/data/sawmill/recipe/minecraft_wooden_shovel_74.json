@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:swamp_oak_log"
+    },
+    {
+      "item": "bloomingnature:swamp_oak_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_swamp_oak_log"
+    },
+    {
+      "item": "bloomingnature:stripped_swamp_oak_wood"
+    }
+  ],
+  "result": {
+    "id": "minecraft:wooden_shovel",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

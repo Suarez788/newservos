@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:bamboo_planks"
+  },
+  "result": {
+    "id": "mythrais:bargeboard_straight_diamonds_spruce_shingle",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:spruce_planks"
+  },
+  "result": {
+    "id": "mythrais:roof_bargeboard_lower_right_67_grey_slate",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

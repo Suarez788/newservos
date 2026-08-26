@@ -1,0 +1,11 @@
+{
+  "group": "planks",
+  "ingredient": {
+    "item": "minecraft:mangrove_planks"
+  },
+  "result": {
+    "id": "mythrais:front_window_opening_dark_oak",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

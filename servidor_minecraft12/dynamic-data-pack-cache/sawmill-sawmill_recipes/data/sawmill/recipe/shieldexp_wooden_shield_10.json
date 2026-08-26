@@ -1,0 +1,17 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "ghosts:haunted_log"
+    },
+    {
+      "item": "ghosts:stripped_haunted_log"
+    }
+  ],
+  "result": {
+    "id": "shieldexp:wooden_shield",
+    "count": 1
+  },
+  "ingredient_count": 2,
+  "type": "sawmill:woodcutting"
+}

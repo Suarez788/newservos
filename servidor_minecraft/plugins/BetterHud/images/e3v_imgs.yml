@@ -1,0 +1,22 @@
+e3v_heart_full:
+  type: single
+  file: "e3v/hearts/full.png"
+e3v_heart_void:
+  type: single
+  file: "e3v/hearts/void.png"
+e3v_heart_broken:
+  type: single
+  file: "e3v/hearts/broken.png"
+
+e3v_hazard_lvl1:
+  type: single
+  file: "e3v/hazards/level_1.png"
+e3v_hazard_lvl2:
+  type: single
+  file: "e3v/hazards/level_2.png"
+e3v_hazard_lvl3:
+  type: single
+  file: "e3v/hazards/level_3.png"
+e3v_hazard_lvl4:
+  type: single
+  file: "e3v/hazards/level_4.png"

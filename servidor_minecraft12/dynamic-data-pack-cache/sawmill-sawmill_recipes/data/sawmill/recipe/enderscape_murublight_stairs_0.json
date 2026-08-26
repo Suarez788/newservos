@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "enderscape:murublight_stem"
+    },
+    {
+      "item": "enderscape:murublight_hyphae"
+    },
+    {
+      "item": "enderscape:stripped_murublight_stem"
+    },
+    {
+      "item": "enderscape:stripped_murublight_hyphae"
+    }
+  ],
+  "result": {
+    "id": "enderscape:murublight_stairs",
+    "count": 4
+  },
+  "type": "sawmill:woodcutting"
+}

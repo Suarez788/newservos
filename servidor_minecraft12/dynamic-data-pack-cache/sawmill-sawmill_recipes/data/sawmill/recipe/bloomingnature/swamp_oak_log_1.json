@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "bloomingnature:swamp_oak_log"
+  },
+  "result": {
+    "id": "bloomingnature:stripped_swamp_oak_wood",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

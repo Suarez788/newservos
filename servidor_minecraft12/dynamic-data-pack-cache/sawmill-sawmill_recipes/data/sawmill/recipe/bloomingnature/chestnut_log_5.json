@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "bloomingnature:chestnut_wood"
+  },
+  "result": {
+    "id": "bloomingnature:stripped_chestnut_log",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}

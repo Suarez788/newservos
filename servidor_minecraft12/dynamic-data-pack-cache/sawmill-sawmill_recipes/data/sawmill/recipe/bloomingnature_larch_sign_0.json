@@ -1,0 +1,22 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "bloomingnature:larch_log"
+    },
+    {
+      "item": "bloomingnature:larch_wood"
+    },
+    {
+      "item": "bloomingnature:stripped_larch_log"
+    },
+    {
+      "item": "bloomingnature:stripped_larch_wood"
+    }
+  ],
+  "result": {
+    "id": "bloomingnature:larch_sign",
+    "count": 2
+  },
+  "type": "sawmill:woodcutting"
+}

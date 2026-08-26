@@ -1,0 +1,11 @@
+{
+  "group": "log",
+  "ingredient": {
+    "item": "enderscape:murublight_stem"
+  },
+  "result": {
+    "id": "enderscape:murublight_hyphae",
+    "count": 1
+  },
+  "type": "sawmill:woodcutting"
+}
