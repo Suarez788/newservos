@@ -1,0 +1,179 @@
+{
+  "name": "Melded Shovel",
+  "description": "Shovel Tier Progression",
+  "icon": "melded:shovel",
+  "version": 1,
+  "id_manually_edited": true,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "shovel_tier_1",
+      "name": "*c846426Tier 1",
+      "description": "Available from the start",
+      "icon": "melded:shovel",
+      "x": 32,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [],
+      "rewards": []
+    },
+    {
+      "id": "shovel_tier_2",
+      "name": "*c9a9a9aTier 2",
+      "description": "Unlocks Tier 2 Shovel Materials",
+      "icon": "melded:shovel *head melded:stone",
+      "x": 80,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 20,
+            "minimumTier": 1,
+            "toolType": "melded:shovel"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 50,
+            "minimumTier": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:shovel",
+            "tier": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "shovel_tier_3",
+      "name": "*cd8d8d8Tier 3",
+      "description": "Unlocks Tier 3 Shovel Materials",
+      "icon": "melded:shovel *head melded:iron",
+      "x": 128,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 40,
+            "minimumTier": 2,
+            "toolType": "melded:shovel"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 90,
+            "minimumTier": 2
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:shovel",
+            "tier": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "shovel_tier_4",
+      "name": "*c33ebcbTier 4",
+      "description": "Unlocks Tier 4 Shovel Materials",
+      "icon": "melded:shovel *head melded:diamond",
+      "x": 176,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 90,
+            "minimumTier": 3,
+            "toolType": "melded:shovel"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 140,
+            "minimumTier": 3
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:shovel",
+            "tier": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "shovel_tier_5",
+      "name": "*c736a73Tier 5",
+      "description": "Unlocks Tier 5 Shovel Materials",
+      "icon": "melded:shovel *head melded:netherite *handle melded:netherite",
+      "x": 224,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 140,
+            "minimumTier": 4,
+            "toolType": "melded:shovel"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 220,
+            "minimumTier": 4
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:shovel",
+            "tier": 5
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "shovel_tier_1",
+      "to": "shovel_tier_2"
+    },
+    {
+      "from": "shovel_tier_2",
+      "to": "shovel_tier_3"
+    },
+    {
+      "from": "shovel_tier_3",
+      "to": "shovel_tier_4"
+    },
+    {
+      "from": "shovel_tier_4",
+      "to": "shovel_tier_5"
+    }
+  ]
+}

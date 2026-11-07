@@ -1,0 +1,132 @@
+{
+  "name": "Special Materials",
+  "description": "Special Slot Material Unlocks",
+  "icon": "melded:silk",
+  "version": 3,
+  "id_manually_edited": true,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "slime",
+      "name": "Slime",
+      "description": "Unlocks Slime Block Material",
+      "icon": "minecraft:slime_block",
+      "x": 100,
+      "y": 48,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "kill_mobs_1",
+          "kill_mobs": {
+            "count": 5,
+            "minimumTier": 2,
+            "entityId": "minecraft:slime"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:slime"
+        }
+      ]
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "description": "Unlocks Honey Block Material",
+      "icon": "minecraft:honey_block",
+      "x": 40,
+      "y": 48,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "minecraft:honey_bottle",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:honey"
+        }
+      ]
+    },
+    {
+      "id": "silk",
+      "name": "Silk",
+      "description": "Unlocks Silk Block Material",
+      "icon": "melded:silk_block",
+      "x": 160,
+      "y": 48,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "melded:mulberry_log",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:silk"
+        }
+      ]
+    },
+    {
+      "id": "ender",
+      "name": "Ender",
+      "description": "Unlocks Ender Pearl Material",
+      "icon": "minecraft:ender_pearl",
+      "x": 220,
+      "y": 48,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "minecraft:ender_pearl",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:ender"
+        }
+      ]
+    },
+    {
+      "id": "sea",
+      "name": "Sea",
+      "description": "Unlocks Heart of the Sea Material",
+      "icon": "minecraft:heart_of_the_sea",
+      "x": 160,
+      "y": 96,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "minecraft:heart_of_the_sea",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:sea"
+        }
+      ]
+    }
+  ],
+  "links": []
+}

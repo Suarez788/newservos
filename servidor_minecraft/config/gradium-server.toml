@@ -1,0 +1,12 @@
+#Gradium — adaptive entity & POI save spreading
+[general]
+	#Minimum entity/POI managers saved per tick (applied when server TPS is low).
+	#Range: 1–20. Default: 1.
+	# Default: 1
+	# Range: 1 ~ 20
+	minSavesPerTick = 1
+	#Maximum entity/POI managers saved per tick (applied when server TPS is healthy).
+	#Range: 1–50. Default: 5.
+	# Default: 5
+	# Range: 1 ~ 50
+	maxSavesPerTick = 5

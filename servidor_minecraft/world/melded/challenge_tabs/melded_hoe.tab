@@ -1,0 +1,187 @@
+{
+  "name": "Melded Hoe",
+  "description": "Hoe Tier Progression",
+  "icon": "melded:hoe",
+  "version": 2,
+  "id_manually_edited": true,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "shovel_tier_1_copy",
+      "name": "*c846426Tier 1",
+      "description": "Available from the start",
+      "icon": "melded:hoe",
+      "x": 32,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [],
+      "rewards": []
+    },
+    {
+      "id": "shovel_tier_2_copy",
+      "name": "*c9a9a9aTier 2",
+      "description": "Unlocks Tier 2 Hoe Materials",
+      "icon": "melded:hoe *head melded:stone",
+      "x": 80,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 20,
+            "minimumTier": 1,
+            "toolType": "melded:hoe"
+          }
+        },
+        {
+          "id": "use_ability_1",
+          "use_ability": {
+            "count": 10,
+            "minimumTier": 1,
+            "toolType": "melded:hoe",
+            "ability": "till"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:hoe",
+            "tier": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "shovel_tier_3_copy",
+      "name": "*cd8d8d8Tier 3",
+      "description": "Unlocks Tier 3 Hoe Materials",
+      "icon": "melded:hoe *head melded:iron",
+      "x": 128,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 40,
+            "minimumTier": 2,
+            "toolType": "melded:hoe"
+          }
+        },
+        {
+          "id": "use_ability_1",
+          "use_ability": {
+            "count": 20,
+            "minimumTier": 2,
+            "toolType": "melded:hoe",
+            "ability": "till"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:hoe",
+            "tier": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "shovel_tier_4_copy",
+      "name": "*c33ebcbTier 4",
+      "description": "Unlocks Tier 4 Hoe Materials",
+      "icon": "melded:hoe *head melded:diamond",
+      "x": 176,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 90,
+            "minimumTier": 3,
+            "toolType": "melded:hoe"
+          }
+        },
+        {
+          "id": "use_ability_1",
+          "use_ability": {
+            "count": 40,
+            "minimumTier": 3,
+            "toolType": "melded:hoe",
+            "ability": "till"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:hoe",
+            "tier": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "shovel_tier_5_copy",
+      "name": "*c736a73Tier 5",
+      "description": "Unlocks Tier 5 Hoe Materials",
+      "icon": "melded:hoe *head melded:netherite *handle melded:netherite",
+      "x": 224,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 140,
+            "minimumTier": 4,
+            "toolType": "melded:hoe"
+          }
+        },
+        {
+          "id": "use_ability_1",
+          "use_ability": {
+            "count": 60,
+            "minimumTier": 4,
+            "toolType": "melded:hoe",
+            "ability": "till"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:hoe",
+            "tier": 5
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "shovel_tier_1_copy",
+      "to": "shovel_tier_2_copy"
+    },
+    {
+      "from": "shovel_tier_2_copy",
+      "to": "shovel_tier_3_copy"
+    },
+    {
+      "from": "shovel_tier_3_copy",
+      "to": "shovel_tier_4_copy"
+    },
+    {
+      "from": "shovel_tier_4_copy",
+      "to": "shovel_tier_5_copy"
+    }
+  ]
+}

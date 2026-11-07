@@ -1,0 +1,17 @@
+[progression]
+	#Replaces naturally generated vanilla mob tools with Melded tools.
+	replaceMobTools = true
+	#Replaces vanilla tools generated in chest loot with Melded tools.
+	replaceChestLoot = true
+	#Replaces vanilla tool results in villager trades with Melded tools.
+	replaceVillagerTrades = true
+	#Enforces Melded tool tier progression. When enabled, tools above a player's unlocked tier cannot be used.
+	enableToolTierLocking = true
+	#Removes vanilla wooden, stone, iron, golden, diamond, and netherite tool recipes. Wooden recipes are removed instead of being replaced with Melded tools.
+	removeVanillaToolRecipes = true
+	#If true, all individually locked materials are temporarily treated as unlocked for every player. Tool tier progression is not modified.
+	unlockAllMaterials = false
+	#If true, all material tiers are temporarily treated as unlocked for every tool type. Individual material unlocks are not modified.
+	unlockAllToolTiers = false
+	#If true, all locked Melded tool types are unlocked for every player.
+	unlockAllTools = false

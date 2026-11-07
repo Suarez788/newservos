@@ -1,0 +1,206 @@
+{
+  "name": "Dimensional Materials",
+  "description": "Dimensional Material Unlocks",
+  "icon": "minecraft:netherite_scrap",
+  "version": 2,
+  "id_manually_edited": true,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "crimson",
+      "name": "Crimson",
+      "description": "Unlocks Crimson Planks Material",
+      "icon": "minecraft:crimson_planks",
+      "x": 40,
+      "y": 24,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "enter_biome_1",
+          "enter_biome": {
+            "biomeId": "minecraft:crimson_forest"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:crimson"
+        }
+      ]
+    },
+    {
+      "id": "warped",
+      "name": "Warped",
+      "description": "Unlocks Warped Planks Material",
+      "icon": "minecraft:warped_planks",
+      "x": 40,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_biome_1",
+          "enter_biome": {
+            "biomeId": "minecraft:warped_forest"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:warped"
+        }
+      ]
+    },
+    {
+      "id": "blackstone",
+      "name": "Blackstone",
+      "description": "Unlocks Blackstone Material",
+      "icon": "minecraft:blackstone",
+      "x": 40,
+      "y": 120,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_biome_1",
+          "enter_biome": {
+            "biomeId": "minecraft:basalt_deltas"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:blackstone"
+        }
+      ]
+    },
+    {
+      "id": "quartz",
+      "name": "Quartz",
+      "description": "Unlocks Nether Quartz Material",
+      "icon": "minecraft:quartz",
+      "x": 160,
+      "y": 24,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_biome_1",
+          "enter_biome": {
+            "biomeId": "minecraft:nether_wastes"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:quartz"
+        }
+      ]
+    },
+    {
+      "id": "blaze",
+      "name": "Blaze",
+      "description": "Unlocks Blaze Rod Material",
+      "icon": "minecraft:blaze_rod",
+      "x": 160,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_structure_1",
+          "enter_structure": {
+            "structureId": "minecraft:fortress"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:blaze"
+        },
+        {
+          "id": "material_unlock_2",
+          "material_unlock": "melded:blaze"
+        }
+      ]
+    },
+    {
+      "id": "purpur",
+      "name": "Purpur",
+      "description": "Unlocks Popped Chorus Fruit Material",
+      "icon": "minecraft:popped_chorus_fruit",
+      "x": 220,
+      "y": 24,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_structure_1",
+          "enter_structure": {
+            "structureId": "minecraft:end_city"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:purpur"
+        }
+      ]
+    },
+    {
+      "id": "netherite",
+      "name": "Netherite",
+      "description": "Unlocks Netherite Ingot Material",
+      "icon": "minecraft:netherite_ingot",
+      "x": 220,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_structure_1",
+          "enter_structure": {
+            "structureId": "minecraft:bastion_remnant"
+          }
+        },
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "minecraft:ancient_debris",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:netherite"
+        }
+      ]
+    },
+    {
+      "id": "end_stone",
+      "name": "End Stone",
+      "description": "Unlocks End Stone Material",
+      "icon": "minecraft:end_stone",
+      "x": 100,
+      "y": 24,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_biome_1",
+          "enter_biome": {
+            "biomeId": "minecraft:the_end"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:endstone"
+        }
+      ]
+    }
+  ],
+  "links": []
+}
