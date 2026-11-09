@@ -1,0 +1,139 @@
+# Chance for a monster to be a summoner (0.0 - 1.0)
+summonerChance: 0.05
+# Cooldown between summons in ticks (20 ticks = 1 second)
+spawnCooldown: 200
+# Initial delay before first summon in ticks
+initialSpawnDelay: 300
+# Maximum minions per summoner
+maxMinions: 3
+# Range to detect targets and spawn minions in blocks
+minionSpawnRange: 16
+# Only summon at night (true/false)
+onlySummonAtNight: false
+# Only summon when raining (true/false)
+onlySummonWhenRaining: false
+# Per-mob disable list for summoner behavior.
+# Example:
+  # - minecraft:creeper
+  # - minecraft:enderman
+# If a mob id is listed here, that mob will NOT be a summoner.
+exemptMobTypes:
+- minecraft:creeper
+- minecraft:enderman
+- minecraft:shulker
+- minecraft:ghast
+- minecraft:slime
+- minecraft:magma_cube
+- minecraft:warden
+- minecraft:elder_guardian
+- minecraft:ender_dragon
+- minecraft:wither
+# Allowed dimensions for summoners.
+# Example:
+  # - minecraft:overworld
+  # - minecraft:the_nether
+allowedDimensions:
+- minecraft:overworld
+- minecraft:the_nether
+# true = only allow listed dimensions, false = block listed dimensions
+dimensionWhitelist: true
+# Weight modifiers for summoner chance by mob type.
+# Higher = more likely to be summoner. Default: 1.0
+# Example:
+  # minecraft:zombie: 1.2
+  # minecraft:skeleton: 0.5
+summonerWeights:
+  minecraft:pillager: 1.5
+  minecraft:skeleton: 0.5
+  minecraft:zombified_piglin: 0.7
+  minecraft:stray: 1.4
+  minecraft:spider: 0.8
+  minecraft:zombie: 1.2
+  minecraft:drowned: 0.9
+  minecraft:husk: 1.3
+# Minion health multiplier (1.0 = normal, 0.5 = half health, 2.0 = double health)
+minionHealthMultiplier: 1.0
+# Minion damage multiplier (1.0 = normal, 0.5 = half damage, 2.0 = double damage)
+minionDamageMultiplier: 0.7
+# Minion speed multiplier (1.0 = normal, 0.5 = slower, 2.0 = faster)
+minionSpeedMultiplier: 1.0
+# Minion equipment, configurable per mob type.
+# Default entry (used for any mob type not explicitly listed):
+  # default:
+    # mainhand: minecraft:iron_sword
+    # offhand: minecraft:shield
+    # helmet: minecraft:iron_helmet
+    # chestplate: minecraft:iron_chestplate
+    # leggings: minecraft:iron_leggings
+    # boots: minecraft:iron_boots
+#
+# Type-specific override example:
+  # minecraft:zombie:
+    # offhand: minecraft:shield
+    # helmet: minecraft:turtle_helmet
+#
+# Allowed slots: mainhand, offhand, helmet, chestplate, leggings, boots.
+minionEquipment:
+  default: {
+    }
+# Chance for minions to spawn with equipment (0.0 - 1.0)
+minionEquipmentChance: 0.0
+# Minion potion effects applied on spawn (global for all minion types).
+# Example:
+  # minecraft:strength:
+    # duration: 600
+    # amplifier: 0
+  # minecraft:resistance:
+    # duration: 600
+    # amplifier: 0
+minionEffects: {
+  }
+# Summoner health multiplier (1.0 = normal, 1.5 = 50% more health)
+summonerHealthMultiplier: 1.0
+# Summoner damage multiplier (1.0 = normal, 1.5 = 50% more damage)
+summonerDamageMultiplier: 1.0
+# Summoner speed multiplier (1.0 = normal, 1.2 = 20% faster)
+summonerSpeedMultiplier: 1.0
+# Summoner armor boost (added to base armor, can be negative)
+summonerArmorBoost: 0
+# Summoner toughness boost (added to base toughness)
+summonerToughnessBoost: 0.0
+# Summoner equipment, configurable per mob type.
+# Default entry (used for any mob type not explicitly listed):
+  # default:
+    # offhand: minecraft:shield
+#
+# Type-specific override example:
+  # minecraft:zombie:
+    # offhand: minecraft:totem_of_undying
+    # helmet: minecraft:diamond_helmet
+#
+# Allowed slots: mainhand, offhand, helmet, chestplate, leggings, boots.
+summonerEquipment:
+  default: {
+    }
+# Summoner potion effects applied when mob becomes summoner.
+# Default effects (applied to all summoners):
+  # default:
+    # minecraft:fire_resistance:
+      # duration: -1
+      # amplifier: 0
+    # minecraft:resistance:
+      # duration: 600
+      # amplifier: 0
+#
+# Type-specific effects (added on top of default, overwrites if duplicate key):
+  # minecraft:zombie:
+    # minecraft:strength:
+      # duration: 600
+      # amplifier: 1
+    # minecraft:speed:
+      # duration: -1
+      # amplifier: 0
+#
+# A duration of -1 means infinite.
+summonerEffects:
+  default:
+    minecraft:fire_resistance:
+      duration: -1
+      amplifier: 0

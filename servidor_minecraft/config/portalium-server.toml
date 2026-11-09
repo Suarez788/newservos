@@ -1,0 +1,6 @@
+#Portalium - dimension unload settings
+[general]
+	#Seconds after all players leave a dimension before it goes dormant (default 8). The overworld never goes dormant.
+	# Default: 8
+	# Range: 1 ~ 300
+	unloadDelaySeconds = 8

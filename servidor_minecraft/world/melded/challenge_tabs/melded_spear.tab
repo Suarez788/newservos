@@ -1,0 +1,179 @@
+{
+  "name": "Melded Spear",
+  "description": "Spear Tier Progression",
+  "icon": "melded:spear",
+  "version": 1,
+  "id_manually_edited": false,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "spear_tier_1",
+      "name": "*c846426Tier 1",
+      "description": "Available from the start",
+      "icon": "melded:spear",
+      "x": 32,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [],
+      "rewards": []
+    },
+    {
+      "id": "spear_tier_2",
+      "name": "*c9a9a9aTier 2",
+      "description": "Unlocks Tier 2 Spear Materials",
+      "icon": "melded:spear *head melded:stone",
+      "x": 80,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "kill_mobs_1",
+          "kill_mobs": {
+            "count": 5,
+            "minimumTier": 1,
+            "toolType": "melded:spear"
+          }
+        },
+        {
+          "id": "kill_mobs_2",
+          "kill_mobs": {
+            "count": 15,
+            "minimumTier": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:spear",
+            "tier": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "spear_tier_3",
+      "name": "*cd8d8d8Tier 3",
+      "description": "Unlocks Tier 3 Spear Materials",
+      "icon": "melded:spear *head melded:iron",
+      "x": 128,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "kill_mobs_1",
+          "kill_mobs": {
+            "count": 10,
+            "minimumTier": 2,
+            "toolType": "melded:spear"
+          }
+        },
+        {
+          "id": "kill_mobs_2",
+          "kill_mobs": {
+            "count": 25,
+            "minimumTier": 2
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:spear",
+            "tier": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "spear_tier_4",
+      "name": "*c33ebcbTier 4",
+      "description": "Unlocks Tier 4 Spear Materials",
+      "icon": "melded:spear *head melded:diamond",
+      "x": 176,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "kill_mobs_1",
+          "kill_mobs": {
+            "count": 20,
+            "minimumTier": 3,
+            "toolType": "melded:spear"
+          }
+        },
+        {
+          "id": "kill_mobs_2",
+          "kill_mobs": {
+            "count": 40,
+            "minimumTier": 3
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:spear",
+            "tier": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "spear_tier_5",
+      "name": "*c736a73Tier 5",
+      "description": "Unlocks Tier 5 Spear Materials",
+      "icon": "melded:spear *head melded:netherite *handle melded:netherite",
+      "x": 224,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "kill_mobs_1",
+          "kill_mobs": {
+            "count": 40,
+            "minimumTier": 4,
+            "toolType": "melded:spear"
+          }
+        },
+        {
+          "id": "kill_mobs_2",
+          "kill_mobs": {
+            "count": 80,
+            "minimumTier": 4
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:spear",
+            "tier": 5
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "spear_tier_1",
+      "to": "spear_tier_2"
+    },
+    {
+      "from": "spear_tier_2",
+      "to": "spear_tier_3"
+    },
+    {
+      "from": "spear_tier_3",
+      "to": "spear_tier_4"
+    },
+    {
+      "from": "spear_tier_4",
+      "to": "spear_tier_5"
+    }
+  ]
+}

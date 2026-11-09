@@ -1,0 +1,193 @@
+{
+  "name": "Melded Trowel",
+  "description": "Trowel Tier Progression",
+  "icon": "melded:trowel",
+  "version": 1,
+  "id_manually_edited": false,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "trowel_tier_1",
+      "name": "*c846426Tier 1",
+      "description": "Unlocks Trowel and its Tier 1 Materials",
+      "icon": "melded:trowel",
+      "x": 32,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "place_blocks_1",
+          "place_blocks": {
+            "count": 100,
+            "minimumTier": 1,
+            "withTrowel": false
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "tool_unlock_1",
+          "tool_unlock": "melded:trowel"
+        }
+      ]
+    },
+    {
+      "id": "trowel_tier_2",
+      "name": "*c9a9a9aTier 2",
+      "description": "Unlocks Tier 2 Trowel Materials",
+      "icon": "melded:trowel *head melded:stone",
+      "x": 80,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "place_blocks_2",
+          "place_blocks": {
+            "count": 30,
+            "minimumTier": 1,
+            "withTrowel": true
+          }
+        },
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 50,
+            "minimumTier": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:trowel",
+            "tier": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "trowel_tier_3",
+      "name": "*cd8d8d8Tier 3",
+      "description": "Unlocks Tier 3 Trowel Materials",
+      "icon": "melded:trowel *head melded:iron",
+      "x": 128,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "place_blocks_1",
+          "place_blocks": {
+            "count": 60,
+            "minimumTier": 2,
+            "withTrowel": true
+          }
+        },
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 90,
+            "minimumTier": 2
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:trowel",
+            "tier": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "trowel_tier_4",
+      "name": "*c33ebcbTier 4",
+      "description": "Unlocks Tier 4 Trowel Materials",
+      "icon": "melded:trowel *head melded:diamond",
+      "x": 176,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "place_blocks_1",
+          "place_blocks": {
+            "count": 110,
+            "minimumTier": 3,
+            "withTrowel": true
+          }
+        },
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 140,
+            "minimumTier": 3
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:trowel",
+            "tier": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "trowel_tier_5",
+      "name": "*c736a73Tier 5",
+      "description": "Unlocks Tier 5 Trowel Materials",
+      "icon": "melded:trowel *head melded:netherite *handle melded:netherite",
+      "x": 224,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "place_blocks_1",
+          "place_blocks": {
+            "count": 180,
+            "minimumTier": 4,
+            "withTrowel": true
+          }
+        },
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 220,
+            "minimumTier": 4
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:trowel",
+            "tier": 5
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "trowel_tier_1",
+      "to": "trowel_tier_2"
+    },
+    {
+      "from": "trowel_tier_2",
+      "to": "trowel_tier_3"
+    },
+    {
+      "from": "trowel_tier_3",
+      "to": "trowel_tier_4"
+    },
+    {
+      "from": "trowel_tier_4",
+      "to": "trowel_tier_5"
+    }
+  ]
+}

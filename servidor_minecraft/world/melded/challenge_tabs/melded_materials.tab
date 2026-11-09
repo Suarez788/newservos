@@ -1,0 +1,200 @@
+{
+  "name": "Melded Materials",
+  "description": "Melded Material Unlocks",
+  "icon": "melded:rhodonite_chunk",
+  "version": 2,
+  "id_manually_edited": true,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "material_prismarine",
+      "name": "Prismarine",
+      "description": "Unlocks Prismarine Shard Material",
+      "icon": "minecraft:prismarine_shard",
+      "x": 160,
+      "y": 28,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "enter_structure_1",
+          "enter_structure": {
+            "structureId": "minecraft:monument"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:prismarine"
+        }
+      ]
+    },
+    {
+      "id": "bamboo",
+      "name": "Bamboo",
+      "description": "Unlocks Bamboo Material",
+      "icon": "minecraft:bamboo",
+      "x": 40,
+      "y": 28,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "minecraft:bamboo",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:bamboo"
+        }
+      ]
+    },
+    {
+      "id": "rhodonite",
+      "name": "Rhodonite",
+      "description": "Unlocks Rhodonite Chunk Material",
+      "icon": "melded:rhodonite_chunk",
+      "x": 40,
+      "y": 76,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "melded:rhodonite_chunk",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:rhodonite"
+        }
+      ]
+    },
+    {
+      "id": "deepslate",
+      "name": "Deepslate",
+      "description": "Unlocks Deepslate Material",
+      "icon": "minecraft:cobbled_deepslate",
+      "x": 100,
+      "y": 28,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "reach_y_level_1",
+          "reach_y_level": {
+            "y": 0,
+            "direction": "below"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:deepslate"
+        }
+      ]
+    },
+    {
+      "id": "blue_ice",
+      "name": "Blue Ice",
+      "description": "Unlocks Blue Ice Material",
+      "icon": "minecraft:blue_ice",
+      "x": 100,
+      "y": 76,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "minecraft:blue_ice",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:blueice"
+        }
+      ]
+    },
+    {
+      "id": "breeze",
+      "name": "Breeze",
+      "description": "Unlocks Breeze Rod Material",
+      "icon": "minecraft:breeze_rod",
+      "x": 160,
+      "y": 76,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_structure_1",
+          "enter_structure": {
+            "structureId": "minecraft:trial_chambers"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:breeze"
+        }
+      ]
+    },
+    {
+      "id": "echo",
+      "name": "Echo",
+      "description": "Unlocks Echo Shard Material",
+      "icon": "minecraft:echo_shard",
+      "x": 220,
+      "y": 28,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "enter_structure_1",
+          "enter_structure": {
+            "structureId": "minecraft:ancient_city"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:echo"
+        }
+      ]
+    },
+    {
+      "id": "rosestone",
+      "name": "Rosestone",
+      "description": "",
+      "icon": "melded:rosestone",
+      "x": 100,
+      "y": 124,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "obtain_item_1",
+          "obtain_item": {
+            "itemId": "melded:rosestone",
+            "count": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_unlock_1",
+          "material_unlock": "melded:rosestone"
+        }
+      ]
+    }
+  ],
+  "links": []
+}

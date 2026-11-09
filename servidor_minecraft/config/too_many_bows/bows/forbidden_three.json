@@ -1,0 +1,18 @@
+{
+  "eventideDamage": 25.0,
+  "lanceDamage": 50.0,
+  "finalMaxHealthFraction": 0.18,
+  "worldeaterDamage": 25.0,
+  "dragonDiveDamage": 50.0,
+  "dragonfireDamage": 26.0,
+  "godsplitterDamage": 25.0,
+  "headshotMultiplier": 8.0,
+  "abilityCooldownTicks": 80,
+  "maxDominance": 10,
+  "starfallDelayTicks": 40,
+  "dragonfireDurationTicks": 100,
+  "fragmentChance": 0.25,
+  "bluntedEdgeChance": 0.18,
+  "affectPlayers": false,
+  "protectPets": true
+}

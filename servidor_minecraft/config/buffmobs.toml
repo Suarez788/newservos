@@ -1,0 +1,1061 @@
+[general]
+	#Enable or disable the mod entirely
+	enabled = true
+	#Show visual particles for status effects
+	visualEffects = true
+
+[dayScaling]
+	#Enable day-based difficulty scaling
+	enabled = false
+	#Days between each scaling increase
+	# Default: 7
+	# Range: 1 ~ 365
+	interval = 7
+	#Multiplier added per interval
+	# Default: 0.1
+	# Range: 0.01 ~ 999999.0
+	multiplier = 0.1
+	#Maximum scaling multiplier
+	# Default: 5.0
+	# Range: 0.0 ~ 999999.0
+	maxMultiplier = 5.0
+	#Show day scaling notifications to players
+	showNotifications = true
+	#When to send notifications: EVERY_DAY or SCALING_INCREASE_ONLY
+	#Allowed Values: EVERY_DAY, SCALING_INCREASE_ONLY
+	notificationMode = "EVERY_DAY"
+
+[attributes]
+	#Health multiplier for mobs
+	# Default: 1.5
+	# Range: 0.1 ~ 999999.0
+	healthMultiplier = 1.5
+	#Damage multiplier for mobs
+	# Default: 1.5
+	# Range: 0.1 ~ 999999.0
+	damageMultiplier = 1.5
+	#Speed multiplier for mobs
+	# Default: 1.0
+	# Range: 0.1 ~ 999999.0
+	speedMultiplier = 1.0
+	#Attack speed multiplier for mobs
+	# Default: 1.0
+	# Range: 0.1 ~ 999999.0
+	attackSpeedMultiplier = 1.0
+	#Armor points added to mobs
+	# Default: 5.0
+	# Range: 0.0 ~ 999999.0
+	armorAddition = 5.0
+	#Armor toughness added to mobs
+	# Default: 0.0
+	# Range: 0.0 ~ 999999.0
+	armorToughnessAddition = 0.0
+
+[effects]
+	#Effect duration in seconds, -1 for infinite
+	# Default: -1
+	# Range: -1 ~ 7200
+	duration = -1
+	#Strength effect level (0 = disabled)
+	# Default: 0
+	# Range: 0 ~ 10
+	strengthAmplifier = 0
+	#Speed effect level (0 = disabled)
+	# Default: 0
+	# Range: 0 ~ 10
+	speedAmplifier = 0
+	#Resistance effect level (0 = disabled)
+	# Default: 0
+	# Range: 0 ~ 10
+	resistanceAmplifier = 0
+	#Regeneration effect level (0 = disabled, skipped for undead)
+	# Default: 0
+	# Range: 0 ~ 10
+	regenerationAmplifier = 0
+	#Absorption effect level (0 = disabled)
+	# Default: 0
+	# Range: 0 ~ 10
+	absorptionAmplifier = 0
+
+[harmfulEffects]
+	#Enable harmful effects applied to players on hit
+	enabled = true
+	#Chance of applying a harmful effect per hit (0.0-1.0)
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	chance = 0.15
+	#Poison duration in seconds
+	# Default: 5
+	# Range: 1 ~ 60
+	poisonDuration = 5
+	#Slowness duration in seconds
+	# Default: 3
+	# Range: 1 ~ 60
+	slownessDuration = 3
+	#Wither duration in seconds
+	# Default: 3
+	# Range: 1 ~ 60
+	witherDuration = 3
+	#Allow Poison to be picked as the random harmful effect (each hit randomly picks one of the enabled effects)
+	poisonEnabled = true
+	#Allow Slowness to be picked as the random harmful effect
+	slownessEnabled = true
+	#Allow Wither to be picked as the random harmful effect
+	witherEnabled = true
+
+[dimensionScaling]
+	#Select scaling mode: SCALING (multiply base attributes) or OVERRIDE (replace with fixed multipliers)
+	#Allowed Values: SCALING, OVERRIDE
+	mode = "SCALING"
+
+	[dimensionScaling.slot1]
+		#Dimension ID, e.g. minecraft:overworld
+		dimensionName = ""
+		#Health % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		healthMultiplier = 100
+		#Damage % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		damageMultiplier = 100
+		#Speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		speedMultiplier = 100
+		#Attack speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		attackSpeedMultiplier = 100
+		#Armor points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorAddition = 0
+		#Armor toughness points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorToughnessAddition = 0
+
+	[dimensionScaling.slot2]
+		#Dimension ID, e.g. minecraft:overworld
+		dimensionName = ""
+		#Health % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		healthMultiplier = 100
+		#Damage % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		damageMultiplier = 100
+		#Speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		speedMultiplier = 100
+		#Attack speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		attackSpeedMultiplier = 100
+		#Armor points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorAddition = 0
+		#Armor toughness points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorToughnessAddition = 0
+
+	[dimensionScaling.slot3]
+		#Dimension ID, e.g. minecraft:overworld
+		dimensionName = ""
+		#Health % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		healthMultiplier = 100
+		#Damage % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		damageMultiplier = 100
+		#Speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		speedMultiplier = 100
+		#Attack speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		attackSpeedMultiplier = 100
+		#Armor points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorAddition = 0
+		#Armor toughness points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorToughnessAddition = 0
+
+	[dimensionScaling.slot4]
+		#Dimension ID, e.g. minecraft:overworld
+		dimensionName = ""
+		#Health % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		healthMultiplier = 100
+		#Damage % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		damageMultiplier = 100
+		#Speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		speedMultiplier = 100
+		#Attack speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		attackSpeedMultiplier = 100
+		#Armor points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorAddition = 0
+		#Armor toughness points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorToughnessAddition = 0
+
+	[dimensionScaling.slot5]
+		#Dimension ID, e.g. minecraft:overworld
+		dimensionName = ""
+		#Health % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		healthMultiplier = 100
+		#Damage % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		damageMultiplier = 100
+		#Speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		speedMultiplier = 100
+		#Attack speed % multiplier (100 = 1x)
+		# Default: 100
+		# Range: 100 ~ 999999
+		attackSpeedMultiplier = 100
+		#Armor points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorAddition = 0
+		#Armor toughness points added
+		# Default: 0
+		# Range: 0 ~ 999999
+		armorToughnessAddition = 0
+
+[mobFilter]
+	#If true, only mobs in the whitelist are buffed
+	useWhitelist = false
+	#Mob IDs to buff (used when useWhitelist = true)
+	whitelist = []
+	#Mob IDs to never buff
+	blacklist = ["minecraft:warden"]
+
+[modidFilter]
+	#If true, only mobs from whitelisted mods are buffed
+	useWhitelist = false
+	#Mod IDs to buff
+	whitelist = []
+	#Mod IDs to never buff
+	blacklist = []
+
+[dimensionFilter]
+	#If true, only buff mobs in whitelisted dimensions
+	useWhitelist = false
+	#Dimensions where mobs are buffed (useWhitelist = true)
+	whitelist = ["minecraft:overworld", "minecraft:the_nether", "minecraft:the_end"]
+	#Dimensions where mobs are never buffed
+	blacklist = []
+
+[rangedMeleeSwitching]
+	#Enable ranged mob close-range behavior
+	enabled = true
+	#MELEE: ranged mobs switch to sword when player is close.
+	#KITE:  ranged mobs run away to maintain distance.
+	#RANDOM: each mob randomly picks MELEE or KITE on spawn.
+	#Allowed Values: MELEE, KITE, RANDOM
+	behaviorMode = "RANDOM"
+	#Distance threshold that triggers the behavior
+	# Default: 4.0
+	# Range: 1.0 ~ 16.0
+	switchDistance = 4.0
+	#Speed multiplier when in melee mode
+	# Default: 0.9
+	# Range: 0.1 ~ 5.0
+	meleeSpeedMultiplier = 0.9
+	#Additional mob IDs treated as ranged
+	customRangedMobs = []
+	# Default: 0
+	# Range: 0 ~ 365
+	stoneSwordUnlockDay = 0
+	# Default: 7
+	# Range: 0 ~ 365
+	ironSwordUnlockDay = 7
+	# Default: 21
+	# Range: 0 ~ 365
+	diamondSwordUnlockDay = 21
+	# Default: 60
+	# Range: 0 ~ 365
+	netheriteSwordUnlockDay = 60
+	# Default: 0
+	# Range: 0 ~ 365
+	goldenAxeUnlockDay = 0
+	# Default: 14
+	# Range: 0 ~ 365
+	diamondAxeUnlockDay = 14
+	# Default: 45
+	# Range: 0 ~ 365
+	netheriteAxeUnlockDay = 45
+	#Enable enchantments on generated melee weapons
+	enchantmentsEnabled = true
+	# Default: 2
+	# Range: 1 ~ 4
+	maxEnchantmentsPerWeapon = 2
+	# Default: 7
+	# Range: 1 ~ 30
+	daysPerEnchantmentLevel = 7
+	# Default: 0
+	# Range: 0 ~ 365
+	sharpnessUnlockDay = 0
+	# Default: 5
+	# Range: 1 ~ 5
+	sharpnessMaxLevel = 5
+	# Default: 14
+	# Range: 0 ~ 365
+	fireAspectUnlockDay = 14
+	# Default: 2
+	# Range: 1 ~ 2
+	fireAspectMaxLevel = 2
+	# Default: 7
+	# Range: 0 ~ 365
+	knockbackUnlockDay = 7
+	# Default: 2
+	# Range: 1 ~ 2
+	knockbackMaxLevel = 2
+	# Default: 21
+	# Range: 0 ~ 365
+	sweepingEdgeUnlockDay = 21
+	# Default: 3
+	# Range: 1 ~ 3
+	sweepingEdgeMaxLevel = 3
+
+[combatDraft]
+	#Enable CombatDraft: hostile/neutral mobs drink a regeneration potion when low on health.
+	enabled = true
+	#HP fraction that triggers the potion (0.20 = 20% of max HP).
+	# Default: 0.2
+	# Range: 0.01 ~ 0.99
+	healthThreshold = 0.2
+	#Regeneration effect level (1 = Regen I, 4 = Regen IV). Default 4.
+	# Default: 4
+	# Range: 1 ~ 10
+	regenAmplifier = 4
+	#Regeneration duration in seconds.
+	# Default: 10
+	# Range: 1 ~ 120
+	regenDuration = 10
+	#Ticks before the mob can use CombatDraft again. Default 600 (30 s).
+	# Default: 600
+	# Range: 20 ~ 72000
+	cooldownTicks = 600
+	#Max times a mob can use CombatDraft per life. 0 = unlimited.
+	# Default: 0
+	# Range: 0 ~ 100
+	maxUses = 0
+	#If true, only mobs in 'whitelist' can use CombatDraft.
+	useWhitelist = false
+	#Mob IDs allowed to use CombatDraft (only when useWhitelist = true).
+	whitelist = []
+	#Mob IDs that cannot use CombatDraft (always applied). Slime, magma_cube and ghast are hardcoded.
+	blacklist = []
+
+[mobPresets]
+	#Enable per-mob stat presets
+	enabled = false
+	#If true, mobs that have a matching preset ignore dimensionScaling multipliers and only use the preset values.
+	overrideDimensionScaling = false
+	#Mob-to-preset mapping, format: modid:mob_id:preset_name
+	mobMapping = ["minecraft:zombie:default", "minecraft:skeleton:default", "minecraft:ender_dragon:boss", "minecraft:wither:boss"]
+
+	[mobPresets.preset1]
+		presetName = ""
+		# Default: 1.0
+		# Range: 0.01 ~ 999999.0
+		healthMultiplier = 1.0
+		# Default: 1.0
+		# Range: 0.01 ~ 999999.0
+		damageMultiplier = 1.0
+		# Default: 1.0
+		# Range: 0.01 ~ 999999.0
+		speedMultiplier = 1.0
+		# Default: 1.0
+		# Range: 0.01 ~ 999999.0
+		attackSpeedMultiplier = 1.0
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		armorAddition = 0.0
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		armorToughnessAddition = 0.0
+
+	[mobPresets.preset2]
+		presetName = ""
+		# Default: 3.0
+		# Range: 0.01 ~ 999999.0
+		healthMultiplier = 3.0
+		# Default: 2.5
+		# Range: 0.01 ~ 999999.0
+		damageMultiplier = 2.5
+		# Default: 1.2
+		# Range: 0.01 ~ 999999.0
+		speedMultiplier = 1.2
+		# Default: 1.5
+		# Range: 0.01 ~ 999999.0
+		attackSpeedMultiplier = 1.5
+		# Default: 10.0
+		# Range: 0.0 ~ 999999.0
+		armorAddition = 10.0
+		# Default: 5.0
+		# Range: 0.0 ~ 999999.0
+		armorToughnessAddition = 5.0
+
+	[mobPresets.preset3]
+		presetName = ""
+		# Default: 2.0
+		# Range: 0.01 ~ 999999.0
+		healthMultiplier = 2.0
+		# Default: 1.8
+		# Range: 0.01 ~ 999999.0
+		damageMultiplier = 1.8
+		# Default: 1.1
+		# Range: 0.01 ~ 999999.0
+		speedMultiplier = 1.1
+		# Default: 1.2
+		# Range: 0.01 ~ 999999.0
+		attackSpeedMultiplier = 1.2
+		# Default: 5.0
+		# Range: 0.0 ~ 999999.0
+		armorAddition = 5.0
+		# Default: 2.0
+		# Range: 0.0 ~ 999999.0
+		armorToughnessAddition = 2.0
+
+	[mobPresets.preset4]
+		presetName = ""
+		# Default: 0.5
+		# Range: 0.01 ~ 999999.0
+		healthMultiplier = 0.5
+		# Default: 0.5
+		# Range: 0.01 ~ 999999.0
+		damageMultiplier = 0.5
+		# Default: 0.9
+		# Range: 0.01 ~ 999999.0
+		speedMultiplier = 0.9
+		# Default: 0.8
+		# Range: 0.01 ~ 999999.0
+		attackSpeedMultiplier = 0.8
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		armorAddition = 0.0
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		armorToughnessAddition = 0.0
+
+	[mobPresets.preset5]
+		presetName = ""
+		# Default: 1.0
+		# Range: 0.01 ~ 999999.0
+		healthMultiplier = 1.0
+		# Default: 1.0
+		# Range: 0.01 ~ 999999.0
+		damageMultiplier = 1.0
+		# Default: 1.0
+		# Range: 0.01 ~ 999999.0
+		speedMultiplier = 1.0
+		# Default: 1.0
+		# Range: 0.01 ~ 999999.0
+		attackSpeedMultiplier = 1.0
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		armorAddition = 0.0
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		armorToughnessAddition = 0.0
+
+[passiveMobAggression]
+	#Passive mob aggression mode: OFF, NEUTRAL (retaliate), HOSTILE (actively attack)
+	#Allowed Values: OFF, NEUTRAL, HOSTILE
+	mode = "OFF"
+	#Base attack damage given to affected passive mobs
+	# Default: 3.0
+	# Range: 0.5 ~ 100.0
+	baseDamage = 3.0
+	#Add bonus damage based on the mob's max health
+	scaleWithHealth = false
+	#Scaling factor: totalDamage = baseDamage + (maxHealth * healthScaleFactor)
+	# Default: 0.1
+	# Range: 0.0 ~ 100.0
+	healthScaleFactor = 0.1
+	#Mob IDs affected (if non-empty, only these mobs are affected)
+	whitelist = []
+	#Mob IDs that are never affected
+	blacklist = []
+
+[zombieHandling]
+	#Strip the vanilla leader zombie health bonus modifier from zombies entirely.
+	disableLeaderZombies = false
+	#Exclude the vanilla leader zombie health bonus from BuffMobs health scaling so leader zombies do not become overpowered. Ignored if disableLeaderZombies is true.
+	excludeLeaderBonusFromMultiplier = true
+
+[healthSync]
+	#Synchronize a mob's current health with its new max health after BuffMobs modifies it, fixing structure mob health desync.
+	enabled = true
+	#OVERRIDE: fully heal the mob to its new max health.
+	#STACK: preserve the mob's existing damage taken and add the health delta on top.
+	#Allowed Values: OVERRIDE, STACK
+	mode = "OVERRIDE"
+
+[dimensionMaxHealth]
+	#Enable fixed max health overrides per dimension
+	enabled = false
+	#If true, only mobs in 'allowlist' receive dimension max health overrides
+	useAllowlist = false
+	#Mob IDs eligible for dimension max health overrides (used when useAllowlist = true)
+	allowlist = []
+	#Mob IDs that never receive dimension max health overrides
+	denylist = []
+
+	[dimensionMaxHealth.slot1]
+		#Dimension ID, e.g. minecraft:the_nether
+		dimensionName = ""
+		#Fixed max health applied to mobs in this dimension (0 = disabled)
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		maxHealth = 0.0
+
+	[dimensionMaxHealth.slot2]
+		#Dimension ID, e.g. minecraft:the_nether
+		dimensionName = ""
+		#Fixed max health applied to mobs in this dimension (0 = disabled)
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		maxHealth = 0.0
+
+	[dimensionMaxHealth.slot3]
+		#Dimension ID, e.g. minecraft:the_nether
+		dimensionName = ""
+		#Fixed max health applied to mobs in this dimension (0 = disabled)
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		maxHealth = 0.0
+
+	[dimensionMaxHealth.slot4]
+		#Dimension ID, e.g. minecraft:the_nether
+		dimensionName = ""
+		#Fixed max health applied to mobs in this dimension (0 = disabled)
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		maxHealth = 0.0
+
+	[dimensionMaxHealth.slot5]
+		#Dimension ID, e.g. minecraft:the_nether
+		dimensionName = ""
+		#Fixed max health applied to mobs in this dimension (0 = disabled)
+		# Default: 0.0
+		# Range: 0.0 ~ 999999.0
+		maxHealth = 0.0
+
+[mobArmor]
+	#Enable scaled armor sets on buffed mobs with valid armor slots
+	enabled = false
+	#Chance that an eligible buffed mob receives a generated armor setup (0.0-1.0)
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	equipChance = 1.0
+	# Default: 0
+	# Range: 0 ~ 365
+	leatherUnlockDay = 0
+	# Default: 7
+	# Range: 0 ~ 365
+	goldUnlockDay = 7
+	# Default: 14
+	# Range: 0 ~ 365
+	ironUnlockDay = 14
+	# Default: 30
+	# Range: 0 ~ 365
+	diamondUnlockDay = 30
+	# Default: 60
+	# Range: 0 ~ 365
+	netheriteUnlockDay = 60
+	# Default: 50.0
+	# Range: 0.0 ~ 1000.0
+	leatherWeight = 50.0
+	# Default: 25.0
+	# Range: 0.0 ~ 1000.0
+	goldWeight = 25.0
+	# Default: 15.0
+	# Range: 0.0 ~ 1000.0
+	ironWeight = 15.0
+	# Default: 4.0
+	# Range: 0.0 ~ 1000.0
+	diamondWeight = 4.0
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	netheriteWeight = 1.0
+	#Enable enchantments on generated armor pieces
+	enchantmentsEnabled = true
+	# Default: 2
+	# Range: 1 ~ 4
+	maxEnchantmentsPerPiece = 2
+	# Default: 7
+	# Range: 1 ~ 30
+	daysPerEnchantmentLevel = 7
+	# Default: 7
+	# Range: 0 ~ 365
+	protectionUnlockDay = 7
+	# Default: 4
+	# Range: 1 ~ 4
+	protectionMaxLevel = 4
+	# Default: 21
+	# Range: 0 ~ 365
+	thornsUnlockDay = 21
+	# Default: 3
+	# Range: 1 ~ 3
+	thornsMaxLevel = 3
+	# Default: 14
+	# Range: 0 ~ 365
+	featherFallingUnlockDay = 14
+	# Default: 4
+	# Range: 1 ~ 4
+	featherFallingMaxLevel = 4
+	#Additional mob IDs (e.g. from other mods) treated as having valid armor slots
+	additionalArmorMobs = []
+	#FULL_SET equips every armor slot, RANDOM_PIECES rolls each slot with the per-slot chances below
+	#Allowed Values: FULL_SET, RANDOM_PIECES
+	setupMode = "FULL_SET"
+	#Roll the armor tier separately for each equipped piece instead of using one tier for the whole setup
+	mixedTiersEnabled = false
+	#Chance to include a helmet in RANDOM_PIECES mode (0.0-1.0)
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	helmetChance = 1.0
+	#Chance to include a chestplate in RANDOM_PIECES mode (0.0-1.0)
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	chestplateChance = 1.0
+	#Chance to include leggings in RANDOM_PIECES mode (0.0-1.0)
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	leggingsChance = 1.0
+	#Chance to include boots in RANDOM_PIECES mode (0.0-1.0)
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	bootsChance = 1.0
+	#Minimum armor pieces guaranteed in RANDOM_PIECES mode
+	# Default: 1
+	# Range: 0 ~ 4
+	minPieces = 1
+	#Maximum armor pieces allowed in RANDOM_PIECES mode
+	# Default: 4
+	# Range: 0 ~ 4
+	maxPieces = 4
+	#Allow generated armor pieces to drop when the mob dies
+	dropChanceEnabled = false
+	#Drop chance for each generated armor piece when dropChanceEnabled is on (0.0-1.0, vanilla equipment uses about 0.085)
+	# Default: 0.085
+	# Range: 0.0 ~ 1.0
+	dropChance = 0.085
+	#Chance that an individual generated armor piece receives enchantments (0.0-1.0)
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	enchantedPieceChance = 1.0
+	# Default: 14
+	# Range: 0 ~ 365
+	fireProtectionUnlockDay = 14
+	# Default: 4
+	# Range: 1 ~ 4
+	fireProtectionMaxLevel = 4
+	# Default: 21
+	# Range: 0 ~ 365
+	blastProtectionUnlockDay = 21
+	# Default: 4
+	# Range: 1 ~ 4
+	blastProtectionMaxLevel = 4
+	# Default: 14
+	# Range: 0 ~ 365
+	projectileProtectionUnlockDay = 14
+	# Default: 4
+	# Range: 1 ~ 4
+	projectileProtectionMaxLevel = 4
+	# Default: 7
+	# Range: 0 ~ 365
+	unbreakingUnlockDay = 7
+	# Default: 3
+	# Range: 1 ~ 3
+	unbreakingMaxLevel = 3
+	# Default: 21
+	# Range: 0 ~ 365
+	respirationUnlockDay = 21
+	# Default: 3
+	# Range: 1 ~ 3
+	respirationMaxLevel = 3
+	# Default: 21
+	# Range: 0 ~ 365
+	aquaAffinityUnlockDay = 21
+	# Default: 1
+	# Range: 1 ~ 1
+	aquaAffinityMaxLevel = 1
+	# Default: 21
+	# Range: 0 ~ 365
+	depthStriderUnlockDay = 21
+	# Default: 3
+	# Range: 1 ~ 3
+	depthStriderMaxLevel = 3
+	# Default: 28
+	# Range: 0 ~ 365
+	frostWalkerUnlockDay = 28
+	# Default: 2
+	# Range: 1 ~ 2
+	frostWalkerMaxLevel = 2
+	#Allow curse enchantments on generated armor pieces
+	cursesEnabled = false
+	#Chance for each enabled curse to be applied to a generated armor piece (0.0-1.0)
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	curseChance = 0.1
+	#Day from which curses can appear on generated armor
+	# Default: 30
+	# Range: 0 ~ 365
+	curseUnlockDay = 30
+	#Allow Curse of Binding on generated armor pieces
+	bindingCurseEnabled = true
+	#Allow Curse of Vanishing on generated armor pieces
+	vanishingCurseEnabled = true
+
+[eliteMobs]
+	#Enable Elite mob variants
+	enabled = false
+	#Base chance for a buffed mob to become Elite on spawn (0.0-1.0)
+	# Default: 0.02
+	# Range: 0.0 ~ 1.0
+	baseChance = 0.02
+	#Additional Elite chance gained per in-game day
+	# Default: 0.001
+	# Range: 0.0 ~ 1.0
+	chanceIncreasePerDay = 0.001
+	#Maximum Elite chance (0.0-1.0)
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	maxChance = 0.25
+	#Health multiplier applied to Elite mobs on top of normal buffs
+	# Default: 3.0
+	# Range: 1.0 ~ 999999.0
+	healthMultiplier = 3.0
+	#Damage multiplier applied to Elite mobs on top of normal buffs
+	# Default: 2.0
+	# Range: 1.0 ~ 999999.0
+	damageMultiplier = 2.0
+	#Color of the Elite custom name, RANDOM picks one preset color per mob, CUSTOM uses customNameColor
+	#Allowed Values: GOLD, RED, DARK_RED, LIGHT_PURPLE, AQUA, YELLOW, RANDOM, CUSTOM
+	nameColor = "GOLD"
+	#Custom Elite name color used when nameColor is CUSTOM, as a hex RGB value such as #FF55FF, FF55FF or 0xFF55FF
+	customNameColor = "#FFAA00"
+	#Translatable name prefix for Elite mobs, RANDOM picks one per mob
+	#Allowed Values: elite, CHAMPION, BRUTE, DREAD, RANDOM
+	namePrefix = "RANDOM"
+	#GENERATED builds a roguelike name from the generated prefix/suffix lists around the mob type name, PREFIX uses the translatable namePrefix option
+	#Allowed Values: GENERATED, PREFIX
+	nameMode = "GENERATED"
+	#Add a random word from generatedNamePrefixes before the mob name in GENERATED mode
+	useGeneratedPrefix = true
+	#Add a random title from generatedNameSuffixes after the mob name in GENERATED mode
+	useGeneratedSuffix = true
+	#Words randomly placed before the mob name in GENERATED mode. Entries without spaces that contain a dot are treated as translation keys and shown in each player's language, anything else is shown literally.
+	generatedNamePrefixes = ["buffmobs.elite.generated_prefix.grim", "buffmobs.elite.generated_prefix.dread", "buffmobs.elite.generated_prefix.savage", "buffmobs.elite.generated_prefix.ancient", "buffmobs.elite.generated_prefix.cursed", "buffmobs.elite.generated_prefix.bloodthirsty", "buffmobs.elite.generated_prefix.feral", "buffmobs.elite.generated_prefix.howling", "buffmobs.elite.generated_prefix.iron", "buffmobs.elite.generated_prefix.nightmare", "buffmobs.elite.generated_prefix.rotting", "buffmobs.elite.generated_prefix.shadow", "buffmobs.elite.generated_prefix.silent", "buffmobs.elite.generated_prefix.storm", "buffmobs.elite.generated_prefix.thorn", "buffmobs.elite.generated_prefix.venomous", "buffmobs.elite.generated_prefix.wretched", "buffmobs.elite.generated_prefix.ember", "buffmobs.elite.generated_prefix.frostbitten", "buffmobs.elite.generated_prefix.grave", "buffmobs.elite.generated_prefix.hollow", "buffmobs.elite.generated_prefix.onyx", "buffmobs.elite.generated_prefix.plague", "buffmobs.elite.generated_prefix.ravenous", "buffmobs.elite.generated_prefix.scarred", "buffmobs.elite.generated_prefix.tomb", "buffmobs.elite.generated_prefix.umbral", "buffmobs.elite.generated_prefix.wild"]
+	#Titles randomly placed after the mob name in GENERATED mode. Entries without spaces that contain a dot are treated as translation keys and shown in each player's language, anything else is shown literally.
+	generatedNameSuffixes = ["buffmobs.elite.generated_suffix.the_undying", "buffmobs.elite.generated_suffix.the_merciless", "buffmobs.elite.generated_suffix.the_devourer", "buffmobs.elite.generated_suffix.the_bonecrusher", "buffmobs.elite.generated_suffix.the_soulreaper", "buffmobs.elite.generated_suffix.the_graveborn", "buffmobs.elite.generated_suffix.the_blooddrinker", "buffmobs.elite.generated_suffix.the_plaguebearer", "buffmobs.elite.generated_suffix.the_stormbringer", "buffmobs.elite.generated_suffix.the_nightmare", "buffmobs.elite.generated_suffix.the_silent_death", "buffmobs.elite.generated_suffix.the_mauler", "buffmobs.elite.generated_suffix.the_heartripper", "buffmobs.elite.generated_suffix.the_doomcaller", "buffmobs.elite.generated_suffix.the_shadowstalker", "buffmobs.elite.generated_suffix.the_ironhide", "buffmobs.elite.generated_suffix.the_fang", "buffmobs.elite.generated_suffix.the_carrion_king", "buffmobs.elite.generated_suffix.the_dreadlord", "buffmobs.elite.generated_suffix.the_widowmaker", "buffmobs.elite.generated_suffix.the_howling_terror", "buffmobs.elite.generated_suffix.the_corpsecaller", "buffmobs.elite.generated_suffix.the_voidtouched", "buffmobs.elite.generated_suffix.the_throatripper", "buffmobs.elite.generated_suffix.the_ashen_one", "buffmobs.elite.generated_suffix.the_mooncursed", "buffmobs.elite.generated_suffix.the_skullsplitter", "buffmobs.elite.generated_suffix.the_harbinger"]
+	#Continuous vanilla particle shown around Elite mobs, RANDOM picks one particle per mob
+	#Allowed Values: ENCHANT, FLAME, SOUL_FIRE_FLAME, PORTAL, END_ROD, HAPPY_VILLAGER, HEART, SNOWFLAKE, ELECTRIC_SPARK, RANDOM, NONE
+	particle = "ENCHANT"
+	#Ticks between Elite particle bursts
+	# Default: 10
+	# Range: 1 ~ 200
+	particleIntervalTicks = 10
+	#Notify players within notifyRadius when an Elite mob spawns
+	notifyNearbyPlayers = true
+	#Radius in blocks for Elite spawn notifications, also used to notify when a player first approaches an Elite
+	# Default: 48.0
+	# Range: 0.0 ~ 256.0
+	notifyRadius = 48.0
+	#Enable bonus rewards for killing Elite mobs, works even when lootXpScaling is disabled
+	bonusRewardsEnabled = true
+	#XP multiplier applied when an Elite mob dies (5.0 = five times the normal XP), stacked on top of any lootXpScaling bonus
+	# Default: 5.0
+	# Range: 1.0 ~ 999999.0
+	rewardXpMultiplier = 5.0
+	#Extra loot table rolls granted when an Elite mob dies, added on top of any lootXpScaling rolls
+	# Default: 2
+	# Range: 0 ~ 20
+	rewardExtraLootRolls = 2
+
+[lootXpScaling]
+	#Enable loot and XP scaling for buffed mobs
+	enabled = false
+	#Scale dropped XP with the mob's effective buff multiplier (base attributes, dimension, preset, day and adaptive scaling)
+	xpScalingEnabled = true
+	#Maximum XP multiplier from effective buff scaling
+	# Default: 5.0
+	# Range: 1.0 ~ 999999.0
+	maxXpMultiplier = 5.0
+	#Roll the mob loot table additional times based on the mob's effective buff multiplier
+	extraLootRollsEnabled = true
+	#Maximum number of extra loot rolls per mob (doubled cap during a Blood Moon)
+	# Default: 3
+	# Range: 0 ~ 20
+	maxExtraLootRolls = 3
+
+[traits]
+	#Enable elemental traits on buffed mobs (at most one trait per mob)
+	enabled = false
+	#Chance for a buffed mob to receive exactly one trait on spawn (0.0-1.0)
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	chance = 0.15
+	# Default: 20
+	# Range: 0 ~ 1000
+	flameWeight = 20
+	# Default: 20
+	# Range: 0 ~ 1000
+	frostWeight = 20
+	# Default: 20
+	# Range: 0 ~ 1000
+	toxicWeight = 20
+	# Default: 15
+	# Range: 0 ~ 1000
+	voltaicWeight = 15
+	# Default: 15
+	# Range: 0 ~ 1000
+	vampiricWeight = 15
+	# Default: 10
+	# Range: 0 ~ 1000
+	armoredWeight = 10
+	#Seconds the FLAME trait sets its target on fire
+	# Default: 4
+	# Range: 1 ~ 60
+	flameFireSeconds = 4
+	#Seconds of Slowness applied by the FROST trait
+	# Default: 3
+	# Range: 1 ~ 60
+	frostSlownessSeconds = 3
+	#Slowness level applied by the FROST trait (2 = Slowness II)
+	# Default: 2
+	# Range: 1 ~ 10
+	frostSlownessLevel = 2
+	#Seconds of Poison applied by the TOXIC trait
+	# Default: 5
+	# Range: 1 ~ 60
+	toxicPoisonSeconds = 5
+	#Poison level applied by the TOXIC trait
+	# Default: 1
+	# Range: 1 ~ 10
+	toxicPoisonLevel = 1
+	#Chance for the VOLTAIC trait to chain extra damage to nearby enemies on hit (0.0-1.0)
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	voltaicChainChance = 0.35
+	#Extra damage dealt to each chained enemy by the VOLTAIC trait
+	# Default: 4.0
+	# Range: 0.0 ~ 999999.0
+	voltaicChainDamage = 4.0
+	#Radius in blocks around the hit target searched for VOLTAIC chain targets
+	# Default: 4.0
+	# Range: 0.0 ~ 32.0
+	voltaicChainRadius = 4.0
+	#Maximum number of chained enemies per VOLTAIC hit
+	# Default: 3
+	# Range: 1 ~ 20
+	voltaicMaxTargets = 3
+	#Fraction of dealt damage healed by the VAMPIRIC trait (0.25 = 25%)
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	vampiricHealPercent = 0.25
+	#Permanent armor points granted by the ARMORED trait
+	# Default: 8.0
+	# Range: 0.0 ~ 999999.0
+	armoredArmorBonus = 8.0
+	#Permanent armor toughness granted by the ARMORED trait
+	# Default: 4.0
+	# Range: 0.0 ~ 999999.0
+	armoredToughnessBonus = 4.0
+	#Enable trait on-hit effects (Flame ignites, Frost slows, Toxic poisons, Voltaic chains, Vampiric heals on hit). Separate from the HarmfulEffects category, which applies a random effect from any buffed mob.
+	onHitEffectsEnabled = true
+	#Continuous particle shown by mobs with the FLAME trait, NONE disables it and RANDOM picks one particle per mob
+	#Allowed Values: ENCHANT, FLAME, SOUL_FIRE_FLAME, PORTAL, END_ROD, HAPPY_VILLAGER, HEART, SNOWFLAKE, ELECTRIC_SPARK, RANDOM, NONE
+	flameParticle = "FLAME"
+	#Continuous particle shown by mobs with the FROST trait, NONE disables it and RANDOM picks one particle per mob
+	#Allowed Values: ENCHANT, FLAME, SOUL_FIRE_FLAME, PORTAL, END_ROD, HAPPY_VILLAGER, HEART, SNOWFLAKE, ELECTRIC_SPARK, RANDOM, NONE
+	frostParticle = "SNOWFLAKE"
+	#Continuous particle shown by mobs with the TOXIC trait, NONE disables it and RANDOM picks one particle per mob
+	#Allowed Values: ENCHANT, FLAME, SOUL_FIRE_FLAME, PORTAL, END_ROD, HAPPY_VILLAGER, HEART, SNOWFLAKE, ELECTRIC_SPARK, RANDOM, NONE
+	toxicParticle = "HAPPY_VILLAGER"
+	#Continuous particle shown by mobs with the VOLTAIC trait, NONE disables it and RANDOM picks one particle per mob
+	#Allowed Values: ENCHANT, FLAME, SOUL_FIRE_FLAME, PORTAL, END_ROD, HAPPY_VILLAGER, HEART, SNOWFLAKE, ELECTRIC_SPARK, RANDOM, NONE
+	voltaicParticle = "ELECTRIC_SPARK"
+	#Continuous particle shown by mobs with the VAMPIRIC trait, NONE disables it and RANDOM picks one particle per mob
+	#Allowed Values: ENCHANT, FLAME, SOUL_FIRE_FLAME, PORTAL, END_ROD, HAPPY_VILLAGER, HEART, SNOWFLAKE, ELECTRIC_SPARK, RANDOM, NONE
+	vampiricParticle = "HEART"
+	#Continuous particle shown by mobs with the ARMORED trait, NONE disables it and RANDOM picks one particle per mob
+	#Allowed Values: ENCHANT, FLAME, SOUL_FIRE_FLAME, PORTAL, END_ROD, HAPPY_VILLAGER, HEART, SNOWFLAKE, ELECTRIC_SPARK, RANDOM, NONE
+	armoredParticle = "NONE"
+
+[packAggression]
+	#Enable pack aggression: nearby mobs of the same type join the fight when a buffed mob is attacked by a player
+	enabled = false
+	#Radius in blocks searched for pack members
+	# Default: 16.0
+	# Range: 1.0 ~ 64.0
+	radius = 16.0
+	#Maximum number of additional mobs pulled per attack
+	# Default: 5
+	# Range: 1 ~ 50
+	maxPackSize = 5
+	#Per-mob cooldown in ticks before it can be pulled by another pack attack
+	# Default: 200
+	# Range: 0 ~ 72000
+	cooldownTicks = 200
+
+[specialAbilities]
+	#Enable per-mob special abilities
+	enabled = false
+	#Mob-to-ability mapping, format: modid:mob_id:ability_id (deathrattle, laststand, Teleport, Summon)
+	mobAbilities = []
+
+	[specialAbilities.deathrattle]
+		#Effect triggered on death: EXPLOSION, POISON_CLOUD, Summon_MINIONS or RANDOM (one random effect per death)
+		#Allowed Values: EXPLOSION, POISON_CLOUD, Summon_MINIONS, RANDOM
+		mode = "POISON_CLOUD"
+		#Explosion power used by the EXPLOSION mode
+		# Default: 1.5
+		# Range: 0.0 ~ 20.0
+		explosionPower = 1.5
+		#Whether the EXPLOSION mode destroys blocks
+		explosionBreaksBlocks = false
+		#Radius of the poison area effect cloud
+		# Default: 2.5
+		# Range: 0.5 ~ 16.0
+		poisonCloudRadius = 2.5
+		#Duration in seconds of the poison area effect cloud
+		# Default: 5
+		# Range: 1 ~ 60
+		poisonCloudDurationSeconds = 5
+		#Poison level applied by the cloud
+		# Default: 1
+		# Range: 1 ~ 10
+		poisonCloudLevel = 1
+		#Entity ID summoned by the Summon_MINIONS mode, e.g. minecraft:slime
+		minionEntityId = "minecraft:slime"
+		#Minimum minions summoned by the Summon_MINIONS mode
+		# Default: 1
+		# Range: 0 ~ 10
+		minionMinCount = 1
+		#Maximum minions summoned by the Summon_MINIONS mode
+		# Default: 2
+		# Range: 0 ~ 10
+		minionMaxCount = 2
+
+	[specialAbilities.lastStand]
+		#HP fraction below which Last Stand triggers once per life (0.20 = 20%)
+		# Default: 0.2
+		# Range: 0.01 ~ 0.99
+		healthThreshold = 0.2
+		#Resistance level granted by Last Stand
+		# Default: 2
+		# Range: 1 ~ 10
+		resistanceLevel = 2
+		#Resistance duration in seconds granted by Last Stand
+		# Default: 5
+		# Range: 1 ~ 60
+		resistanceDurationSeconds = 5
+
+	[specialAbilities.Teleport]
+		#Chance to Teleport behind the attacker when damaged (0.0-1.0)
+		# Default: 0.25
+		# Range: 0.0 ~ 1.0
+		chance = 0.25
+		#Ticks before the mob can Teleport again
+		# Default: 100
+		# Range: 0 ~ 72000
+		cooldownTicks = 100
+		#Distance in blocks behind the attacker used as the Teleport destination
+		# Default: 2.0
+		# Range: 0.5 ~ 16.0
+		distanceBehindAttacker = 2.0
+
+	[specialAbilities.Summon]
+		#Ticks between minion summons while the ability is active
+		# Default: 200
+		# Range: 20 ~ 72000
+		intervalTicks = 200
+		#Entity ID summoned as a minion, e.g. minecraft:zombie
+		minionEntityId = "minecraft:zombie"
+		#Maximum number of simultaneously alive minions per summoner (0 = no summons)
+		# Default: 3
+		# Range: 0 ~ 20
+		maxAliveMinions = 3
+		#Only Summon minions while the mob has an attack target
+		onlyInCombat = true
+
+[bloodMoon]
+	#Enable the Blood Moon event (logical only, world time is never changed)
+	enabled = false
+	#In-game days between Blood Moon nights
+	# Default: 7
+	# Range: 1 ~ 365
+	intervalDays = 7
+	#Extra multiplier applied on top of normal scaling during a Blood Moon
+	# Default: 1.5
+	# Range: 1.0 ~ 999999.0
+	extraMultiplier = 1.5
+	#Apply a temporary Glowing effect to buffed mobs during a Blood Moon
+	glowingMobs = false
+	#Double scaled XP and extra loot rolls during a Blood Moon (requires lootXpScaling)
+	doubleLootAndXp = true
+	#Send a global chat notification to all players when a Blood Moon starts and ends
+	notifyPlayers = true
+	#Approximate a higher spawn rate during a Blood Moon by occasionally duplicating natural spawns (true spawn-rate changes require a Mixin and are not supported)
+	spawnBoostEnabled = false
+	#Chance that a natural spawn during a Blood Moon is duplicated once (0.0-1.0)
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	extraSpawnChance = 0.25
+
+[adaptiveDifficulty]
+	#Enable adaptive difficulty based on player performance, multiplied on top of day scaling
+	enabled = false
+	#Player deaths required for each adaptive bonus step
+	# Default: 3
+	# Range: 1 ~ 100
+	deathsPerStep = 3
+	#Multiplier bonus added per death step (0.1 = +10%)
+	# Default: 0.1
+	# Range: 0.0 ~ 10.0
+	bonusPerStep = 0.1
+	#Maximum accumulated adaptive bonus
+	# Default: 2.0
+	# Range: 0.0 ~ 100.0
+	maxBonus = 2.0
+	#Reduce the adaptive bonus as players kill buffed mobs
+	killReductionEnabled = true
+	#Buffed mob kills required for each reduction step
+	# Default: 25
+	# Range: 1 ~ 1000
+	killsPerReductionStep = 25
+	#Multiplier bonus removed per kill step
+	# Default: 0.05
+	# Range: 0.0 ~ 10.0
+	reductionPerStep = 0.05

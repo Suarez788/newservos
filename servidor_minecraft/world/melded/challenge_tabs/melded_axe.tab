@@ -1,0 +1,179 @@
+{
+  "name": "Melded Axe",
+  "description": "Axe Tier Progression",
+  "icon": "melded:axe",
+  "version": 1,
+  "id_manually_edited": true,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "axe_tier_1",
+      "name": "*c846426Tier 1",
+      "description": "Available from the start",
+      "icon": "melded:axe",
+      "x": 32,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [],
+      "rewards": []
+    },
+    {
+      "id": "axe_tier_2",
+      "name": "*c9a9a9aTier 2",
+      "description": "Unlocks Tier 2 Axe Materials",
+      "icon": "melded:axe *head melded:stone",
+      "x": 80,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 20,
+            "minimumTier": 1,
+            "toolType": "melded:axe"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 50,
+            "minimumTier": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:axe",
+            "tier": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "axe_tier_3",
+      "name": "*cd8d8d8Tier 3",
+      "description": "Unlocks Tier 3 Axe Materials",
+      "icon": "melded:axe *head melded:iron",
+      "x": 128,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 40,
+            "minimumTier": 2,
+            "toolType": "melded:axe"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 90,
+            "minimumTier": 2
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:axe",
+            "tier": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "axe_tier_4",
+      "name": "*c33ebcbTier 4",
+      "description": "Unlocks Tier 4 Axe Materials",
+      "icon": "melded:axe *head melded:diamond",
+      "x": 176,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 90,
+            "minimumTier": 3,
+            "toolType": "melded:axe"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 140,
+            "minimumTier": 3
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:axe",
+            "tier": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "axe_tier_5",
+      "name": "*c736a73Tier 5",
+      "description": "Unlocks Tier 5 Axe Materials",
+      "icon": "melded:axe *head melded:netherite *handle melded:netherite",
+      "x": 224,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 140,
+            "minimumTier": 4,
+            "toolType": "melded:axe"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 220,
+            "minimumTier": 4
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:axe",
+            "tier": 5
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "axe_tier_1",
+      "to": "axe_tier_2"
+    },
+    {
+      "from": "axe_tier_2",
+      "to": "axe_tier_3"
+    },
+    {
+      "from": "axe_tier_3",
+      "to": "axe_tier_4"
+    },
+    {
+      "from": "axe_tier_4",
+      "to": "axe_tier_5"
+    }
+  ]
+}

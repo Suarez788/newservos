@@ -1,0 +1,201 @@
+{
+  "name": "Melded Mattock",
+  "description": "Mattock Tier Progression",
+  "icon": "melded:mattock",
+  "version": 1,
+  "id_manually_edited": true,
+  "required_mod_id": "",
+  "nodes": [
+    {
+      "id": "mattock_tier_1",
+      "name": "*c846426Tier 1",
+      "description": "Unlocks Mattock and its Tier 1 Materials",
+      "icon": "melded:mattock",
+      "x": 32,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 32,
+            "minimumTier": 1,
+            "toolType": "melded:axe"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 32,
+            "minimumTier": 1,
+            "toolType": "melded:shovel"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "tool_unlock_1",
+          "tool_unlock": "melded:mattock"
+        }
+      ]
+    },
+    {
+      "id": "axe_tier_2_copy",
+      "name": "*c9a9a9aTier 2",
+      "description": "Unlocks Tier 2 Mattock Materials",
+      "icon": "melded:mattock *head melded:stone",
+      "x": 80,
+      "y": 72,
+      "id_manually_edited": false,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 20,
+            "minimumTier": 1,
+            "toolType": "melded:mattock"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 50,
+            "minimumTier": 1
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:mattock",
+            "tier": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "mattock_tier_3",
+      "name": "*cd8d8d8Tier 3",
+      "description": "Unlocks Tier 3 Mattock Materials",
+      "icon": "melded:mattock *head melded:iron",
+      "x": 128,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 40,
+            "minimumTier": 2,
+            "toolType": "melded:mattock"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 90,
+            "minimumTier": 2
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:mattock",
+            "tier": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "mattock_tier_4",
+      "name": "*c33ebcbTier 4",
+      "description": "Unlocks Tier 4 Mattock Materials",
+      "icon": "melded:mattock *head melded:diamond",
+      "x": 176,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 90,
+            "minimumTier": 3,
+            "toolType": "melded:mattock"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 140,
+            "minimumTier": 3
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:mattock",
+            "tier": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "mattock_tier_5",
+      "name": "*c736a73Tier 5",
+      "description": "Unlocks Tier 5 Mattock Materials",
+      "icon": "melded:mattock *head melded:netherite *handle melded:netherite",
+      "x": 224,
+      "y": 72,
+      "id_manually_edited": true,
+      "challenges": [
+        {
+          "id": "mine_blocks_1",
+          "mine_blocks": {
+            "count": 140,
+            "minimumTier": 4,
+            "toolType": "melded:mattock"
+          }
+        },
+        {
+          "id": "mine_blocks_2",
+          "mine_blocks": {
+            "count": 220,
+            "minimumTier": 4
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "id": "material_tier_1",
+          "material_tier": {
+            "toolType": "melded:mattock",
+            "tier": 5
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "mattock_tier_1",
+      "to": "axe_tier_2_copy"
+    },
+    {
+      "from": "axe_tier_2_copy",
+      "to": "mattock_tier_3"
+    },
+    {
+      "from": "mattock_tier_3",
+      "to": "mattock_tier_4"
+    },
+    {
+      "from": "mattock_tier_4",
+      "to": "mattock_tier_5"
+    }
+  ]
+}
